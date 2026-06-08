@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Gallery | Landscapes & Fruits - Nano Banana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="brand">
+            <svg class="brand-icon" viewBox="0 0 24 24">
+                <path d="M19.5,9.5C18.8,7.9 17.5,6.5 15.8,5.8C14.1,5.1 12.2,5 10.5,5.5L13.5,2.5L12,1L6,7L12,13L13.5,11.5L10.9,8.9C12.1,8.5 13.5,8.6 14.7,9.1C15.9,9.6 16.8,10.6 17.3,11.8C17.8,13 17.8,14.4 17.3,15.6C16.8,16.8 15.9,17.7 14.7,18.2C13.5,18.7 12.1,18.7 10.9,18.2L9.5,19.6C11.3,20.5 13.5,20.6 15.4,19.9C17.3,19.2 18.8,17.7 19.5,15.8C20.2,13.8 20.2,11.6 19.5,9.5Z" />
+                <path d="M8,10.5C7.2,10.5 6.5,11.2 6.5,12C6.5,12.8 7.2,13.5 8,13.5C8.8,13.5 9.5,12.8 9.5,12C9.5,11.2 8.8,10.5 8,10.5Z" />
+            </svg>
+            <span class="brand-text">Nano Banana</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="flavors.html" class="nav-link">Flavors</a></li>
+            <li><a href="about.html" class="nav-link">Sri Lanka</a></li>
+            <li><a href="farm-to-bottle.html" class="nav-link">Our Process</a></li>
+            <li><a href="experience.html" class="nav-link">Map Experience</a></li>
+            <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="flavors.html" class="order-btn pulse-glow">Order Now</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main style="padding-top: 8rem;">
+        <section class="section" style="padding-top: 2rem;">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 1rem;">Island Media Gallery</h2>
+            <p class="section-text" style="text-align: center; max-width: 600px; margin: 0 auto 3rem auto;">
+                A visual journey through Sri Lanka's landscapes, our raw ingredients, packaging craft, and luxury product catalog.
+            </p>
+
+            <!-- Filters -->
+            <div class="gallery-filters" id="gallery-filter-menu">
+                <button class="gallery-filter-btn active" data-filter="all">All</button>
+                <button class="gallery-filter-btn" data-filter="landscapes">Landscapes</button>
+                <button class="gallery-filter-btn" data-filter="fruits">Fruits</button>
+                <button class="gallery-filter-btn" data-filter="production">Production</button>
+                <button class="gallery-filter-btn" data-filter="products">Products</button>
+            </div>
+
+            <!-- Grid -->
+            <div class="gallery-grid" id="gallery-masonry">
+                <!-- Sigiriya -->
+                <div class="gallery-item" data-cat="landscapes">
+                    <img src="https://images.unsplash.com/photo-1588598126702-861c828ca1e3?auto=format&fit=crop&w=500&q=80" alt="Sigiriya Fortress">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Landscapes</span>
+                        <h4 class="gallery-title">Sigiriya Rock</h4>
+                    </div>
+                </div>
+                <!-- Mango -->
+                <div class="gallery-item" data-cat="fruits">
+                    <img src="https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&w=500&q=80" alt="Fresh Alphonso Mangoes">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Fruits</span>
+                        <h4 class="gallery-title">Alphonso Mangoes</h4>
+                    </div>
+                </div>
+                <!-- Ella -->
+                <div class="gallery-item" data-cat="landscapes">
+                    <img src="https://images.unsplash.com/photo-1545161296-d9c2c241f2ad?auto=format&fit=crop&w=500&q=80" alt="Nine Arch Bridge Ella">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Landscapes</span>
+                        <h4 class="gallery-title">Ella Railway Bridge</h4>
+                    </div>
+                </div>
+                <!-- Coconut -->
+                <div class="gallery-item" data-cat="fruits">
+                    <img src="https://images.unsplash.com/photo-1526318896980-cf78c088247c?auto=format&fit=crop&w=500&q=80" alt="Golden King Coconuts">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Fruits</span>
+                        <h4 class="gallery-title">King Coconuts</h4>
+                    </div>
+                </div>
+                <!-- Harvest -->
+                <div class="gallery-item" data-cat="production">
+                    <img src="https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&w=500&q=80" alt="Fruit Harvesting">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Production</span>
+                        <h4 class="gallery-title">Hand-picking Produce</h4>
+                    </div>
+                </div>
+                <!-- Bottle Shoot -->
+                <div class="gallery-item" data-cat="products">
+                    <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=500&q=80" alt="Nano Banana Bottle shoot">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Products</span>
+                        <h4 class="gallery-title">Premium Bottle Line</h4>
+                    </div>
+                </div>
+                <!-- Mirissa -->
+                <div class="gallery-item" data-cat="landscapes">
+                    <img src="https://images.unsplash.com/photo-1540206395-68808572332f?auto=format&fit=crop&w=500&q=80" alt="Mirissa Palm Coastline">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Landscapes</span>
+                        <h4 class="gallery-title">Mirissa Beach</h4>
+                    </div>
+                </div>
+                <!-- Pomegranate -->
+                <div class="gallery-item" data-cat="fruits">
+                    <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=500&q=80" alt="Organic Pomegranates">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Fruits</span>
+                        <h4 class="gallery-title">Ruby Pomegranates</h4>
+                    </div>
+                </div>
+                <!-- Pressing -->
+                <div class="gallery-item" data-cat="production">
+                    <img src="https://images.unsplash.com/photo-1610970881699-44a5587caaec?auto=format&fit=crop&w=500&q=80" alt="Cold Pressing juice">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Production</span>
+                        <h4 class="gallery-title">Cold extraction</h4>
+                    </div>
+                </div>
+                <!-- Lifestyle -->
+                <div class="gallery-item" data-cat="products">
+                    <img src="https://images.unsplash.com/photo-1505252585461-04db1ebb846d?auto=format&fit=crop&w=500&q=80" alt="Cold beverage table lifestyle">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Products</span>
+                        <h4 class="gallery-title">Island Dining Lifestyle</h4>
+                    </div>
+                </div>
+                <!-- Nuwara Eliya -->
+                <div class="gallery-item" data-cat="landscapes">
+                    <img src="https://images.unsplash.com/photo-15555899434-94d1368aa7af?auto=format&fit=crop&w=500&q=80" alt="Nuwara Eliya Tea Estates">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Landscapes</span>
+                        <h4 class="gallery-title">Highland Tea Estates</h4>
+                    </div>
+                </div>
+                <!-- Passion Fruit -->
+                <div class="gallery-item" data-cat="fruits">
+                    <img src="https://images.unsplash.com/photo-1527661591475-527312dd65f5?auto=format&fit=crop&w=500&q=80" alt="Passion Fruits">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Fruits</span>
+                        <h4 class="gallery-title">Tropical Passion Fruits</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="brand" style="padding:0;">
+                    <svg class="brand-icon" viewBox="0 0 24 24">
+                        <path d="M19.5,9.5C18.8,7.9 17.5,6.5 15.8,5.8C14.1,5.1 12.2,5 10.5,5.5L13.5,2.5L12,1L6,7L12,13L13.5,11.5L10.9,8.9C12.1,8.5 13.5,8.6 14.7,9.1C15.9,9.6 16.8,10.6 17.3,11.8C17.8,13 17.8,14.4 17.3,15.6C16.8,16.8 15.9,17.7 14.7,18.2C13.5,18.7 12.1,18.7 10.9,18.2L9.5,19.6C11.3,20.5 13.5,20.6 15.4,19.9C17.3,19.2 18.8,17.7 19.5,15.8C20.2,13.8 20.2,11.6 19.5,9.5Z" />
+                        <path d="M8,10.5C7.2,10.5 6.5,11.2 6.5,12C6.5,12.8 7.2,13.5 8,13.5C8.8,13.5 9.5,12.8 9.5,12C9.5,11.2 8.8,10.5 8,10.5Z" />
+                    </svg>
+                    <span class="brand-text">Nano Banana</span>
+                </a>
+                <p>Taste the Island. Drink the Future. Cold-pressed beverages inspired by Sri Lankan nature, supporting agricultural preservation and smallholder livelihoods.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="flavors.html">Flavor Collection</a></li>
+                    <li><a href="about.html">About Sri Lanka</a></li>
+                    <li><a href="farm-to-bottle.html">Our Process</a></li>
+                    <li><a href="experience.html">Experience Map</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="gallery.html">Media Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">F.A.Q. Sheet</a></li>
+                    <li><a href="#">Sourcing Principles</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support Centre</h4>
+                <ul class="footer-links" style="color: rgba(255,255,255,0.5); font-size:0.95rem; line-height: 1.6;">
+                    <li>Email: <a href="mailto:hello@nanobanana.com" style="display:inline; color:inherit;">hello@nanobanana.com</a></li>
+                    <li>Hotline: <a href="tel:+94112345678" style="display:inline; color:inherit;">+94 11 234 5678</a></li>
+                    <li>Colombo, Sri Lanka</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nano Banana. All rights reserved.</p>
+            <p>Designed with &hearts; for Sri Lanka.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

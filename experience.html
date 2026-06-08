@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience Sri Lanka | Sourcing Map - Nano Banana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="brand">
+            <svg class="brand-icon" viewBox="0 0 24 24">
+                <path d="M19.5,9.5C18.8,7.9 17.5,6.5 15.8,5.8C14.1,5.1 12.2,5 10.5,5.5L13.5,2.5L12,1L6,7L12,13L13.5,11.5L10.9,8.9C12.1,8.5 13.5,8.6 14.7,9.1C15.9,9.6 16.8,10.6 17.3,11.8C17.8,13 17.8,14.4 17.3,15.6C16.8,16.8 15.9,17.7 14.7,18.2C13.5,18.7 12.1,18.7(10.9,18.2L9.5,19.6C11.3,20.5 13.5,20.6 15.4,19.9C17.3,19.2 18.8,17.7 19.5,15.8C20.2,13.8 20.2,11.6 19.5,9.5Z" />
+                <path d="M8,10.5C7.2,10.5 6.5,11.2 6.5,12C6.5,12.8 7.2,13.5 8,13.5C8.8,13.5 9.5,12.8 9.5,12C9.5,11.2 8.8,10.5 8,10.5Z" />
+            </svg>
+            <span class="brand-text">Nano Banana</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="flavors.html" class="nav-link">Flavors</a></li>
+            <li><a href="about.html" class="nav-link">Sri Lanka</a></li>
+            <li><a href="farm-to-bottle.html" class="nav-link">Our Process</a></li>
+            <li><a href="experience.html" class="nav-link active">Map Experience</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="flavors.html" class="order-btn pulse-glow">Order Now</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main style="padding-top: 8rem;">
+        <section class="section" style="padding-top: 2rem;">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 1rem;">Sourcing Map Experience</h2>
+            <p class="section-text" style="text-align: center; max-width: 600px; margin: 0 auto 4rem auto;">
+                Every flavor tells a geographical story. Click the hot spots on our interactive Sri Lanka map to explore origins, farm partners, and regional crops.
+            </p>
+
+            <div class="map-layout">
+                <!-- SVG Interactive Map -->
+                <div class="map-wrapper">
+                    <!-- Clean, futuristic SVG rendering of Sri Lanka's teardrop contour -->
+                    <svg class="sri-lanka-map" viewBox="0 0 240 500">
+                        <!-- Island Base Contour -->
+                        <path d="M120,30 C185,90 205,170 205,250 C205,360 160,430 120,470 C80,430 35,360 35,250 C35,170 55,90 120,30 Z" 
+                              fill="rgba(255, 255, 255, 0.02)" 
+                              stroke="rgba(255, 255, 255, 0.1)" 
+                              stroke-width="1.5" />
+                        
+                        <!-- Connecting Grid Lines for Futuristic Look -->
+                        <line x1="120" y1="30" x2="120" y2="470" stroke="rgba(255, 255, 255, 0.03)" stroke-dasharray="4" />
+                        <line x1="35" y1="250" x2="205" y2="250" stroke="rgba(255, 255, 255, 0.03)" stroke-dasharray="4" />
+
+                        <!-- Interactive Markers -->
+                        <!-- 1. Sigiriya (Mango) -->
+                        <g class="map-point" data-loc="sigiriya">
+                            <circle class="map-marker" cx="120" cy="190" r="7" />
+                            <circle cx="120" cy="190" r="15" fill="none" stroke="var(--theme-color)" stroke-width="1" opacity="0.4">
+                                <animate attributeName="r" values="7;18;7" dur="2s" repeatCount="indefinite" />
+                            </circle>
+                        </g>
+
+                        <!-- 2. Nuwara Eliya (Tea/Chocolate Almond base) -->
+                        <g class="map-point" data-loc="nuwara-eliya">
+                            <circle class="map-marker" cx="118" cy="305" r="7" />
+                            <circle cx="118" cy="305" r="15" fill="none" stroke="var(--theme-color)" stroke-width="1" opacity="0.4">
+                                <animate attributeName="r" values="7;18;7" dur="2.5s" repeatCount="indefinite" />
+                            </circle>
+                        </g>
+
+                        <!-- 3. Ella (Passion Fruit) -->
+                        <g class="map-point" data-loc="ella">
+                            <circle class="map-marker" cx="125" cy="335" r="7" />
+                            <circle cx="125" cy="335" r="15" fill="none" stroke="var(--theme-color)" stroke-width="1" opacity="0.4">
+                                <animate attributeName="r" values="7;18;7" dur="2.2s" repeatCount="indefinite" />
+                            </circle>
+                        </g>
+
+                        <!-- 4. Galle & Mirissa (King Coconut) -->
+                        <g class="map-point" data-loc="galle">
+                            <circle class="map-marker" cx="92" cy="425" r="7" />
+                            <circle cx="92" cy="425" r="15" fill="none" stroke="var(--theme-color)" stroke-width="1" opacity="0.4">
+                                <animate attributeName="r" values="7;18;7" dur="1.8s" repeatCount="indefinite" />
+                            </circle>
+                        </g>
+
+                        <!-- 5. Anuradhapura Village Zones (Wood Apple) -->
+                        <g class="map-point" data-loc="anuradhapura">
+                            <circle class="map-marker" cx="108" cy="140" r="7" />
+                            <circle cx="108" cy="140" r="15" fill="none" stroke="var(--theme-color)" stroke-width="1" opacity="0.4">
+                                <animate attributeName="r" values="7;18;7" dur="2.7s" repeatCount="indefinite" />
+                            </circle>
+                        </g>
+                    </svg>
+                </div>
+
+                <!-- Sourcing Details Panel -->
+                <div class="map-details-card">
+                    <div class="glass-card" id="map-info-panel" style="height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 1.5rem;">
+                        <span style="font-weight: 800; text-transform: uppercase; color: var(--theme-color); letter-spacing: 2px; font-size:0.9rem;" id="map-info-region">Sourcing Origin</span>
+                        <h3 class="section-title" id="map-info-title" style="margin-bottom: 0.5rem; font-size:2.5rem;">Select a Location</h3>
+                        <div class="feature-badge" id="map-info-flavor" style="align-self: flex-start; display:none;">Associated Flavor</div>
+                        <p class="section-text" id="map-info-desc" style="margin-bottom: 1.5rem;">
+                            Click on any of the pulsing coordinates on the map of Sri Lanka to discover the unique agricultural parameters, family farms, and ecological practices that make our recipes so exceptional.
+                        </p>
+                        <div id="map-info-action" style="display: none;">
+                            <a href="flavors.html" class="order-btn" style="text-align: center; display: inline-block;">Shop Flavor</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="brand" style="padding:0;">
+                    <svg class="brand-icon" viewBox="0 0 24 24">
+                        <path d="M19.5,9.5C18.8,7.9 17.5,6.5 15.8,5.8C14.1,5.1 12.2,5 10.5,5.5L13.5,2.5L12,1L6,7L12,13L13.5,11.5L10.9,8.9C12.1,8.5 13.5,8.6 14.7,9.1C15.9,9.6 16.8,10.6 17.3,11.8C17.8,13 17.8,14.4 17.3,15.6C16.8,16.8 15.9,17.7 14.7,18.2C13.5,18.7 12.1,18.7 10.9,18.2L9.5,19.6C11.3,20.5 13.5,20.6 15.4,19.9C17.3,19.2 18.8,17.7 19.5,15.8C20.2,13.8 20.2,11.6 19.5,9.5Z" />
+                        <path d="M8,10.5C7.2,10.5 6.5,11.2 6.5,12C6.5,12.8 7.2,13.5 8,13.5C8.8,13.5 9.5,12.8 9.5,12C9.5,11.2 8.8,10.5 8,10.5Z" />
+                    </svg>
+                    <span class="brand-text">Nano Banana</span>
+                </a>
+                <p>Taste the Island. Drink the Future. Cold-pressed beverages inspired by Sri Lankan nature, supporting agricultural preservation and smallholder livelihoods.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="flavors.html">Flavor Collection</a></li>
+                    <li><a href="about.html">About Sri Lanka</a></li>
+                    <li><a href="farm-to-bottle.html">Our Process</a></li>
+                    <li><a href="experience.html">Experience Map</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="gallery.html">Media Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">F.A.Q. Sheet</a></li>
+                    <li><a href="#">Sourcing Principles</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support Centre</h4>
+                <ul class="footer-links" style="color: rgba(255,255,255,0.5); font-size:0.95rem; line-height: 1.6;">
+                    <li>Email: <a href="mailto:hello@nanobanana.com" style="display:inline; color:inherit;">hello@nanobanana.com</a></li>
+                    <li>Hotline: <a href="tel:+94112345678" style="display:inline; color:inherit;">+94 11 234 5678</a></li>
+                    <li>Colombo, Sri Lanka</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nano Banana. All rights reserved.</p>
+            <p>Designed with &hearts; for Sri Lanka.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

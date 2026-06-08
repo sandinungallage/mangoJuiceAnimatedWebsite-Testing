@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nano Banana | Future of Freshness</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Brand Gradient Definition for SVGs -->
+    <svg style="width:0; height:0; position:absolute;" aria-hidden="true" focusable="false">
+        <defs>
+            <linearGradient id="brand-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#f97316" />
+                <stop offset="100%" stop-color="#ec4899" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="brand" id="brand-logo">
+            <!-- Custom Lightning/Banana abstract SVG -->
+            <svg class="brand-icon" viewBox="0 0 24 24">
+                <path d="M19.5,9.5C18.8,7.9 17.5,6.5 15.8,5.8C14.1,5.1 12.2,5 10.5,5.5L13.5,2.5L12,1L6,7L12,13L13.5,11.5L10.9,8.9C12.1,8.5 13.5,8.6 14.7,9.1C15.9,9.6 16.8,10.6 17.3,11.8C17.8,13 17.8,14.4 17.3,15.6C16.8,16.8 15.9,17.7 14.7,18.2C13.5,18.7 12.1,18.7 10.9,18.2L9.5,19.6C11.3,20.5 13.5,20.6 15.4,19.9C17.3,19.2 18.8,17.7 19.5,15.8C20.2,13.8 20.2,11.6 19.5,9.5Z" />
+                <path d="M8,10.5C7.2,10.5 6.5,11.2 6.5,12C6.5,12.8 7.2,13.5 8,13.5C8.8,13.5 9.5,12.8 9.5,12C9.5,11.2 8.8,10.5 8,10.5Z" />
+            </svg>
+            <span class="brand-text">Nano Banana</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#details" class="nav-link">Details</a></li>
+            <li><a href="#freshness" class="nav-link">Freshness</a></li>
+            <li><a href="#buy" class="nav-link">Shop</a></li>
+        </ul>
+        <a href="#buy" class="order-btn pulse-glow" id="nav-order-btn">Order Now</a>
+    </nav>
+
+    <!-- Side Navigation Arrows -->
+    <div class="nav-arrows">
+        <button class="nav-arrow" id="prev-flavor-btn" aria-label="Previous Flavor">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+        </button>
+        <button class="nav-arrow" id="next-flavor-btn" aria-label="Next Flavor">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Bottom Capsule Menu -->
+    <div class="flavor-pill-menu" id="flavor-menu">
+        <!-- Buttons injected dynamically by JS -->
+    </div>
+
+    <!-- Scrollytelling Core Container -->
+    <main>
+        <div class="scrolly-container" id="scrollytelling-container">
+            <div class="sticky-viewport">
+                <!-- High-performance Canvas -->
+                <div class="canvas-wrapper">
+                    <canvas id="bottle-canvas"></canvas>
+                </div>
+
+                <!-- Text overlays that trigger on scroll -->
+                <div class="overlay-text-container" id="overlay-container">
+                    <div class="overlay-section align-center" id="overlay-sec-1">
+                        <h2 class="glow-text" id="sec1-title">Cream Mango.</h2>
+                        <p id="sec1-subtitle">Pure sunshine.</p>
+                    </div>
+                    <div class="overlay-section align-left" id="overlay-sec-2">
+                        <h2 id="sec2-title">Bursting with fresh mango.</h2>
+                        <p id="sec2-subtitle">Hand-picked Alphonso mangoes, perfectly ripened under the summer sun.</p>
+                    </div>
+                    <div class="overlay-section align-right" id="overlay-sec-3">
+                        <h2 id="sec3-title">Vitamin-packed refreshment.</h2>
+                        <p id="sec3-subtitle">A natural energy boost that revitalizes your body and mind instantly.</p>
+                    </div>
+                    <div class="overlay-section align-left" id="overlay-sec-4">
+                        <h2 id="sec4-title">Made from fruit, not concentrate.</h2>
+                        <p id="sec4-subtitle"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Sections Beneath Scrollytelling -->
+        <div class="content-sections">
+            <!-- Product Details Section -->
+            <section class="section reveal-on-scroll" id="details">
+                <div class="reveal-grid">
+                    <div class="glass-card">
+                        <h3 class="section-title" id="details-title">The King of Fruits</h3>
+                        <p class="section-text" id="details-description">
+                            Our Cream Mango juice uses only the finest Ratnagiri Alphonso mangoes. Known for their rich sweetness and vibrant color, these mangoes are cold-pressed within hours of harvest to preserve every drop of nutrient-rich goodness. It's not just juice; it's a liquid gold experience.
+                        </p>
+                        <div class="features-container" id="details-features">
+                            <!-- Injected by JS -->
+                        </div>
+                    </div>
+                    <div class="glass-card">
+                        <h3 class="section-title" style="margin-bottom: 2.5rem;">Nutrition & Stats</h3>
+                        <div class="stats-grid" id="details-stats">
+                            <!-- Injected by JS -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Farm to Bottle Section -->
+            <section class="section reveal-on-scroll" id="freshness">
+                <div class="glass-card" style="text-align: center; max-width: 900px; margin: 0 auto;">
+                    <h3 class="section-title" id="freshness-title">Farm to Bottle</h3>
+                    <p class="section-text" id="freshness-description" style="max-width: 750px; margin: 0 auto 2.5rem auto;">
+                        We believe in absolute transparency. From the orchard to the bottle, our process is designed to minimize oxidation and maximize flavor. HPP (High Pressure Processing) ensures that our juice stays safe and fresh without any heat treatment, keeping the vital enzymes and vitamins intact.
+                    </p>
+                    <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                        <div class="feature-badge">Cold Pressed</div>
+                        <div class="feature-badge">100% Raw & Fresh</div>
+                        <div class="feature-badge">HPP Treated</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Buy Now E-Commerce Card -->
+            <section class="section reveal-on-scroll" id="buy">
+                <div class="buy-now-card">
+                    <div>
+                        <h3 class="section-title" style="margin-bottom: 0.5rem;" id="buy-product-name">Cream Mango</h3>
+                        <p class="section-text" id="buy-product-subname" style="margin-bottom: 2rem; font-weight: 600;">Pure sunshine.</p>
+                        <div class="price-display">
+                            <div class="price-amount" id="buy-price">₹120</div>
+                            <div class="price-unit" id="buy-unit">per 300ml bottle</div>
+                        </div>
+                        <div class="buy-params" id="buy-params-list">
+                            <!-- Injected by JS -->
+                        </div>
+                    </div>
+                    <div class="buy-checkout">
+                        <button class="order-btn checkout-btn pulse-glow" id="buy-checkout-btn">Add to Cart</button>
+                        <p class="delivery-note" id="buy-delivery">Next-day delivery available in metro cities. Chilled packaging ensures peak freshness.</p>
+                        <p class="policy-note" id="buy-policy">100% Satisfaction Guarantee. Not happy? We'll replace it, no questions asked.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Next Flavor slanted CTA -->
+            <div class="next-flavor-cta" id="next-flavor-cta-btn">
+                <div class="next-flavor-bg" id="next-flavor-bg-grad">
+                    <div class="next-flavor-content">
+                        <div class="next-label">Next Flavor</div>
+                        <div class="next-title" id="next-flavor-title">Dutch Chocolate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="brand" style="padding:0;">
+                    <svg class="brand-icon" viewBox="0 0 24 24">
+                        <path d="M19.5,9.5C18.8,7.9 17.5,6.5 15.8,5.8C14.1,5.1 12.2,5 10.5,5.5L13.5,2.5L12,1L6,7L12,13L13.5,11.5L10.9,8.9C12.1,8.5 13.5,8.6 14.7,9.1C15.9,9.6 16.8,10.6 17.3,11.8C17.8,13 17.8,14.4 17.3,15.6C16.8,16.8 15.9,17.7 14.7,18.2C13.5,18.7 12.1,18.7 10.9,18.2L9.5,19.6C11.3,20.5 13.5,20.6 15.4,19.9C17.3,19.2 18.8,17.7 19.5,15.8C20.2,13.8 20.2,11.6 19.5,9.5Z" />
+                        <path d="M8,10.5C7.2,10.5 6.5,11.2 6.5,12C6.5,12.8 7.2,13.5 8,13.5C8.8,13.5 9.5,12.8 9.5,12C9.5,11.2 8.8,10.5 8,10.5Z" />
+                    </svg>
+                    <span class="brand-text">Nano Banana</span>
+                </a>
+                <p>Synthesizing the future of beverage design. Cold-crafted, zero additives, and direct to your door.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul class="footer-links">
+                    <li><a href="#" class="footer-flavor-link" data-index="0">Cream Mango</a></li>
+                    <li><a href="#" class="footer-flavor-link" data-index="1">Dutch Chocolate</a></li>
+                    <li><a href="#" class="footer-flavor-link" data-index="2">Ruby Pomegranate</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul class="footer-links">
+                    <li><a href="#">F.A.Q.</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Sourcing</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Subscribe to receive release details of new seasonal drops.</p>
+                <form class="newsletter-form" id="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed! Welcome to the future of freshness.');">
+                    <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+                    <button type="submit" class="newsletter-submit" aria-label="Subscribe">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nano Banana. All rights reserved.</p>
+            <p>Made with &hearts; for future wellness.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

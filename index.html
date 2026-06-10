@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nano Banana | Premium Sri Lankan Beverage Experience</title>
+    <title>Island Squeeze | Sri Lanka's Premium Cold-Pressed Juice</title>
+    <meta name="description"
+        content="Island Squeeze — cold-pressed juices crafted from Sri Lanka's finest tropical fruits. Pure, raw, and delivered chilled island-wide.">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Brand Gradient Definition for SVGs -->
-    <svg style="width:0; height:0; position:absolute;" aria-hidden="true" focusable="false">
+    <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
         <defs>
             <linearGradient id="brand-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#f97316" />
-                <stop offset="100%" stop-color="#ec4899" />
+                <stop offset="0%" stop-color="#22C55E" />
+                <stop offset="100%" stop-color="#FCD34D" />
             </linearGradient>
         </defs>
     </svg>
@@ -21,10 +24,12 @@
     <nav class="navbar" id="navbar">
         <a href="index.html" class="brand">
             <svg class="brand-icon" viewBox="0 0 24 24">
-                <path d="M19.5,9.5C18.8,7.9 17.5,6.5 15.8,5.8C14.1,5.1 12.2,5 10.5,5.5L13.5,2.5L12,1L6,7L12,13L13.5,11.5L10.9,8.9C12.1,8.5 13.5,8.6 14.7,9.1C15.9,9.6 16.8,10.6 17.3,11.8C17.8,13 17.8,14.4 17.3,15.6C16.8,16.8 15.9,17.7 14.7,18.2C13.5,18.7 12.1,18.7 10.9,18.2L9.5,19.6C11.3,20.5 13.5,20.6 15.4,19.9C17.3,19.2 18.8,17.7 19.5,15.8C20.2,13.8 20.2,11.6 19.5,9.5Z" />
-                <path d="M8,10.5C7.2,10.5 6.5,11.2 6.5,12C6.5,12.8 7.2,13.5 8,13.5C8.8,13.5 9.5,12.8 9.5,12C9.5,11.2 8.8,10.5 8,10.5Z" />
+                <path
+                    d="M12,2C9,2 6.5,4 5.5,6.8C4.5,9.6 5,12.5 6.5,14.8C8,17.1 10,18.5 12,20C14,18.5 16,17.1 17.5,14.8C19,12.5 19.5,9.6 18.5,6.8C17.5,4 15,2 12,2Z" />
+                <path d="M12,6C12,6 8,9 8,13C8,15.2 9.8,17 12,17C14.2,17 16,15.2 16,13C16,9 12,6 12,6Z"
+                    fill="rgba(255,255,255,0.4)" />
             </svg>
-            <span class="brand-text">Nano Banana</span>
+            <span class="brand-text">Island Squeeze</span>
         </a>
         <ul class="nav-links">
             <li><a href="index.html" class="nav-link active">Home</a></li>
@@ -32,23 +37,26 @@
             <li><a href="about.html" class="nav-link">Sri Lanka</a></li>
             <li><a href="farm-to-bottle.html" class="nav-link">Our Process</a></li>
             <li><a href="experience.html" class="nav-link">Map Experience</a></li>
+            <li><a href="impact.html" class="nav-link">Impact</a></li>
             <li><a href="gallery.html" class="nav-link">Gallery</a></li>
             <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
-        <a href="flavors.html" class="order-btn pulse-glow">Order Now</a>
+        <a href="flavors.html" class="order-btn pulse-glow" id="nav-order-btn">Order Now</a>
     </nav>
 
-    <!-- Main Shell -->
     <main>
-        <!-- 1. Cinematic Hero Section -->
+        <!-- Hero -->
         <section class="video-container">
             <video class="video-bg" autoplay loop muted playsinline>
-                <source src="https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c054e54b073c10472eec2e5c7cf99e52&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
+                <source
+                    src="https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c054e54b073c10472eec2e5c7cf99e52&profile_id=139&oauth2_token_id=57447761"
+                    type="video/mp4">
             </video>
             <div class="video-overlay"></div>
             <div class="video-content">
-                <h1 class="glow-text">Taste Sri Lanka<br>in Every Sip</h1>
-                <p>Crafted from the island's finest fruits and inspired by its breathtaking tropical landscapes, ancient heritage, and vibrant energy.</p>
+                <h1 class="glow-text">Taste the Island.<br>Drink the Truth.</h1>
+                <p>Sri Lanka's finest tropical fruits. Cold-pressed raw. No heat. No additives. Delivered island-wide in
+                    24 hours.</p>
                 <div class="video-btns">
                     <a href="flavors.html" class="order-btn">Explore Flavors</a>
                     <a href="about.html" class="outline-btn">Discover Sri Lanka</a>
@@ -56,286 +64,259 @@
             </div>
         </section>
 
-        <!-- 2. Scrollytelling Product Experience -->
+        <!-- Scrollytelling -->
         <div class="scrolly-container" id="scrollytelling-container">
             <div class="sticky-viewport">
-                <!-- High-performance Canvas -->
                 <div class="canvas-wrapper">
                     <canvas id="bottle-canvas"></canvas>
                 </div>
-
-                <!-- Text overlays that trigger on scroll -->
                 <div class="overlay-text-container" id="overlay-container">
                     <div class="overlay-section align-center" id="overlay-sec-1">
-                        <h2 class="glow-text" id="sec1-title">Cream Mango.</h2>
-                        <p id="sec1-subtitle">Pure sunshine.</p>
+                        <h2 class="glow-text" id="sec1-title">Ceylon Mango.</h2>
+                        <p id="sec1-subtitle">Liquid gold from the north.</p>
                     </div>
                     <div class="overlay-section align-left" id="overlay-sec-2">
                         <h2 id="sec2-title">Bursting with fresh mango.</h2>
-                        <p id="sec2-subtitle">Hand-picked Alphonso mangoes, perfectly ripened under the summer sun.</p>
+                        <p id="sec2-subtitle">Hand-picked Willard mangoes from Jaffna's dry-zone orchards.</p>
                     </div>
                     <div class="overlay-section align-right" id="overlay-sec-3">
-                        <h2 id="sec3-title">Vitamin-packed refreshment.</h2>
-                        <p id="sec3-subtitle">A natural energy boost that revitalizes your body and mind instantly.</p>
+                        <h2 id="sec3-title">Vitamin-rich refreshment.</h2>
+                        <p id="sec3-subtitle">No additives, no compromise. Just pure tropical vitality.</p>
                     </div>
                     <div class="overlay-section align-left" id="overlay-sec-4">
                         <h2 id="sec4-title">Made from fruit, not concentrate.</h2>
                         <p id="sec4-subtitle"></p>
                     </div>
                 </div>
-
-                <!-- Side Navigation Arrows -->
-                <div class="nav-arrows" style="position: absolute;">
+                <div class="nav-arrows" style="position:absolute;">
                     <button class="nav-arrow" id="prev-flavor-btn" aria-label="Previous Flavor">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="19" y1="12" x2="5" y2="12"></line>
-                            <polyline points="12 19 5 12 12 5"></polyline>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="19" y1="12" x2="5" y2="12" />
+                            <polyline points="12 19 5 12 12 5" />
                         </svg>
                     </button>
                     <button class="nav-arrow" id="next-flavor-btn" aria-label="Next Flavor">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
                         </svg>
                     </button>
                 </div>
-
-                <!-- Bottom Capsule Menu -->
-                <div class="flavor-pill-menu" id="flavor-menu" style="position: absolute;">
-                    <!-- Buttons injected dynamically by JS -->
-                </div>
+                <div class="flavor-pill-menu" id="flavor-menu" style="position:absolute;"></div>
             </div>
         </div>
 
-        <!-- Content Sections Beneath Scrollytelling -->
+        <!-- Content Sections -->
         <div class="content-sections">
-            <!-- Product Specs & Highlights -->
+
+            <!-- Product Details -->
             <section class="section reveal-on-scroll" id="details">
                 <div class="reveal-grid">
                     <div class="glass-card">
-                        <h3 class="section-title" id="details-title">The King of Fruits</h3>
-                        <p class="section-text" id="details-description">
-                            Our Cream Mango juice uses only the finest Ratnagiri Alphonso mangoes. Known for their rich sweetness and vibrant color, these mangoes are cold-pressed within hours of harvest to preserve every drop of nutrient-rich goodness. It's not just juice; it's a liquid gold experience.
-                        </p>
-                        <div class="features-container" id="details-features">
-                            <!-- Injected by JS -->
-                        </div>
+                        <h3 class="section-title" id="details-title">The North's Finest Mango</h3>
+                        <p class="section-text" id="details-description">Our Ceylon Mango juice sources exclusively from
+                            smallholder family farms in the Jaffna and Vavuniya dry zones.</p>
+                        <div class="features-container" id="details-features"></div>
                     </div>
                     <div class="glass-card">
-                        <h3 class="section-title" style="margin-bottom: 2.5rem;">Nutrition & Stats</h3>
-                        <div class="stats-grid" id="details-stats">
-                            <!-- Injected by JS -->
-                        </div>
+                        <h3 class="section-title" style="margin-bottom:2.5rem;">Nutrition Facts</h3>
+                        <div class="stats-grid" id="details-stats"></div>
                     </div>
                 </div>
             </section>
 
-            <!-- Buy Now E-Commerce Card -->
-            <section class="section reveal-on-scroll" id="buy">
-                <div class="buy-now-card">
-                    <div>
-                        <h3 class="section-title" style="margin-bottom: 0.5rem;" id="buy-product-name">Cream Mango</h3>
-                        <p class="section-text" id="buy-product-subname" style="margin-bottom: 2rem; font-weight: 600;">Pure sunshine.</p>
-                        <div class="price-display">
-                            <div class="price-amount" id="buy-price">₹120</div>
-                            <div class="price-unit" id="buy-unit">per 300ml bottle</div>
-                        </div>
-                        <div class="buy-params" id="buy-params-list">
-                            <!-- Injected by JS -->
-                        </div>
-                    </div>
-                    <div class="buy-checkout">
-                        <button class="order-btn checkout-btn pulse-glow" id="buy-checkout-btn">Add to Cart</button>
-                        <p class="delivery-note" id="buy-delivery">Next-day delivery available in metro cities. Chilled packaging ensures peak freshness.</p>
-                        <p class="policy-note" id="buy-policy">100% Satisfaction Guarantee. Not happy? We'll replace it, no questions asked.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Next Flavor slanted CTA -->
-            <div class="next-flavor-cta" id="next-flavor-cta-btn">
-                <div class="next-flavor-bg" id="next-flavor-bg-grad">
-                    <div class="next-flavor-content">
-                        <div class="next-label">Next Flavor</div>
-                        <div class="next-title" id="next-flavor-title">Dutch Chocolate</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 3. Featured Flavors Preview -->
+            <!-- Freshness -->
             <section class="section reveal-on-scroll">
-                <h2 class="section-title" style="text-align: center;">Curated Island Flavors</h2>
-                <p class="section-text" style="text-align: center; max-width: 600px; margin: 0 auto 3rem auto;">Experience a diverse palette of authentic tropical tastes, ethically sourced from the rich volcanic soils of Sri Lanka.</p>
-                <div class="seasonal-grid">
-                    <div class="seasonal-card" onclick="location.href='flavors.html'">
-                        <img src="https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&w=500&q=80" alt="Cream Mango" class="seasonal-img">
-                        <div class="seasonal-content">
-                            <span class="seasonal-badge">Classic</span>
-                            <h4>Cream Mango</h4>
-                            <p>Golden sweetness inspired by tropical Sri Lanka.</p>
-                        </div>
+                <div class="freshness-section">
+                    <div>
+                        <h3 class="section-title" id="freshness-title">From Orchard to Bottle</h3>
+                        <p class="section-text" id="freshness-description">We believe absolute transparency is
+                            non-negotiable. Our entire supply chain takes under 24 hours.</p>
                     </div>
-                    <div class="seasonal-card" onclick="location.href='flavors.html'">
-                        <img src="https://images.unsplash.com/photo-1548907040-4d42b52125b0?auto=format&fit=crop&w=500&q=80" alt="Dutch Chocolate" class="seasonal-img">
-                        <div class="seasonal-content">
-                            <span class="seasonal-badge">Luxurious</span>
-                            <h4>Dutch Chocolate</h4>
-                            <p>Rich cocoa blended with creamy almond milk base.</p>
-                        </div>
+                    <img src="https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&w=700&q=80"
+                        alt="Cold Pressing Process" class="freshness-img">
+                </div>
+            </section>
+
+            <!-- Counters -->
+            <section class="section reveal-on-scroll">
+                <div class="counters-section">
+                    <div class="counter-card">
+                        <div class="counter-number" data-count="47" data-suffix="+">0+</div>
+                        <div class="counter-label">Farm Partners</div>
                     </div>
-                    <div class="seasonal-card" onclick="location.href='flavors.html'">
-                        <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=500&q=80" alt="Ruby Pomegranate" class="seasonal-img">
-                        <div class="seasonal-content">
-                            <span class="seasonal-badge">Antioxidant</span>
-                            <h4>Ruby Pomegranate</h4>
-                            <p>Naturally vibrant, tart, and deeply refreshing.</p>
-                        </div>
+                    <div class="counter-card">
+                        <div class="counter-number" data-count="8">0</div>
+                        <div class="counter-label">Juice Varieties</div>
                     </div>
-                    <div class="seasonal-card" onclick="location.href='flavors.html'">
-                        <img src="https://images.unsplash.com/photo-1526318896980-cf78c088247c?auto=format&fit=crop&w=500&q=80" alt="King Coconut" class="seasonal-img">
-                        <div class="seasonal-content">
-                            <span class="seasonal-badge">Islander</span>
-                            <h4>King Coconut</h4>
-                            <p>Electrolyte-rich hydration from the golden coconut.</p>
-                        </div>
+                    <div class="counter-card">
+                        <div class="counter-number" data-count="24" data-suffix="h">0h</div>
+                        <div class="counter-label">Farm to Bottle</div>
                     </div>
-                    <div class="seasonal-card" onclick="location.href='flavors.html'">
-                        <img src="https://images.unsplash.com/photo-1527661591475-527312dd65f5?auto=format&fit=crop&w=500&q=80" alt="Passion Fruit" class="seasonal-img">
-                        <div class="seasonal-content">
-                            <span class="seasonal-badge">Tropical</span>
-                            <h4>Passion Fruit</h4>
-                            <p>A tangy, aromatic burst of mountain-grown energy.</p>
-                        </div>
-                    </div>
-                    <div class="seasonal-card" onclick="location.href='flavors.html'">
-                        <img src="https://images.unsplash.com/photo-1628556758792-69af777be1a8?auto=format&fit=crop&w=500&q=80" alt="Wood Apple" class="seasonal-img">
-                        <div class="seasonal-content">
-                            <span class="seasonal-badge">Traditional</span>
-                            <h4>Wood Apple</h4>
-                            <p>A unique, sweet-tart Sri Lankan village classic.</p>
-                        </div>
+                    <div class="counter-card">
+                        <div class="counter-number" data-count="0">0</div>
+                        <div class="counter-label">Additives</div>
                     </div>
                 </div>
             </section>
 
-            <!-- 4. Animated Statistics Section -->
+            <!-- Buy Now -->
             <section class="section reveal-on-scroll">
                 <div class="glass-card">
-                    <h3 class="section-title" style="text-align: center; margin-bottom: 1rem;">Nano Banana by the Numbers</h3>
-                    <p class="section-text" style="text-align: center; max-width: 600px; margin: 0 auto;">Pioneering pure, cold-crafted tropical hydration while supporting smallholder farming estates across the island.</p>
-                    <div class="counter-grid">
-                        <div class="counter-card">
-                            <div class="counter-val" data-target="10000">0</div>
-                            <div class="counter-lbl">Happy Customers</div>
+                    <div class="buy-section">
+                        <div>
+                            <p
+                                style="font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,0.4);margin-bottom:0.75rem;">
+                                Now Available</p>
+                            <h3 class="section-title" style="font-size:3.5rem;" id="buy-product-name">Ceylon Mango</h3>
+                            <p style="color:rgba(255,255,255,0.5);margin-bottom:1.5rem;" id="buy-product-subname">Liquid
+                                gold from the north.</p>
+                            <div class="buy-price-display" id="buy-price">Rs. 650</div>
+                            <div class="buy-unit" id="buy-unit">per 300ml bottle</div>
+                            <div class="buy-params" id="buy-params-list"></div>
+                            <p class="buy-delivery-note" id="buy-delivery">Same-day delivery across Colombo.</p>
+                            <p class="buy-delivery-note" id="buy-policy">100% satisfaction guaranteed.</p>
                         </div>
-                        <div class="counter-card">
-                            <div class="counter-val" data-target="100">0</div>
-                            <div class="counter-lbl">% Natural Ingredients</div>
-                        </div>
-                        <div class="counter-card">
-                            <div class="counter-val" data-target="0">0</div>
-                            <div class="counter-lbl">Artificial Preservatives</div>
-                        </div>
-                        <div class="counter-card">
-                            <div class="counter-val" data-target="24">0</div>
-                            <div class="counter-lbl">Hours Delivery Promise</div>
+                        <div style="display:flex;flex-direction:column;gap:1rem;">
+                            <a href="flavors.html" class="checkout-btn" id="buy-checkout-btn">Order This Flavor →</a>
+                            <a href="flavors.html" class="outline-btn"
+                                style="text-align:center;display:block;padding:1rem;">View All Flavors</a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- 5. Testimonial Section with Slider -->
+            <!-- Testimonials -->
             <section class="section reveal-on-scroll">
-                <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">Echoes of Freshness</h2>
-                <div class="glass-card testimonials-section">
-                    <div class="testimonial-container" id="testimonial-slider">
+                <h2 class="section-title" style="text-align:center;margin-bottom:3rem;">What the Island Is Saying</h2>
+                <div class="testimonials-container">
+                    <div class="testimonials-track">
                         <div class="testimonial-slide">
-                            <p class="testimonial-quote">Cream Mango tastes like a sunny afternoon in Mirissa. The quality is outstanding, and the texture is perfectly smooth. Absolutely addictive.</p>
+                            <p class="testimonial-quote">"The Ceylon Mango is extraordinary — I've tasted fresh-squeezed
+                                juice across Southeast Asia and nothing comes close to the depth of flavour in Island
+                                Squeeze. It tastes like the fruit itself, not a product."</p>
                             <div class="testimonial-user">
-                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&h=120&q=80" alt="Sarah J." class="testimonial-avatar">
-                                <span class="testimonial-name">Sarah Jenkins</span>
-                                <span class="testimonial-role">Wellness Enthusiast</span>
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&h=120&q=80"
+                                    alt="Dilini Perera" class="testimonial-avatar">
+                                <div>
+                                    <div class="testimonial-name">Dilini Perera</div>
+                                    <div class="testimonial-role">Nutritionist, Colombo</div>
+                                </div>
                             </div>
                         </div>
                         <div class="testimonial-slide">
-                            <p class="testimonial-quote">King Coconut juice has completely replaced my post-workout sports drinks. It's clean, raw, and doesn't have that synthetic chemical taste.</p>
+                            <p class="testimonial-quote">"As a professional athlete I'm obsessive about what I put in my
+                                body. King Coconut from Island Squeeze replaced every commercial sports drink in my
+                                regime. Natural electrolytes, zero junk — it's irreplaceable."</p>
                             <div class="testimonial-user">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&h=120&q=80" alt="Arjun S." class="testimonial-avatar">
-                                <span class="testimonial-name">Arjun Senanayake</span>
-                                <span class="testimonial-role">Professional Athlete</span>
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&h=120&q=80"
+                                    alt="Arjun Senanayake" class="testimonial-avatar">
+                                <div>
+                                    <div class="testimonial-name">Arjun Senanayake</div>
+                                    <div class="testimonial-role">National Swimmer</div>
+                                </div>
                             </div>
                         </div>
                         <div class="testimonial-slide">
-                            <p class="testimonial-quote">The Wood Apple smoothie is a beautiful modern tribute to traditional flavors. It is rare to see corporate brands respect local culinary heritage this well.</p>
+                            <p class="testimonial-quote">"The Ruby Pomegranate is a beautiful tribute to what Sri Lankan
+                                agriculture can produce at its finest. Island Squeeze is doing something genuinely
+                                important — celebrating local flavours without compromise."</p>
                             <div class="testimonial-user">
-                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&h=120&q=80" alt="Priyantha D." class="testimonial-avatar">
-                                <span class="testimonial-name">Dr. Priyantha Silva</span>
-                                <span class="testimonial-role">Food Scientist</span>
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&h=120&q=80"
+                                    alt="Dr. Priyantha Silva" class="testimonial-avatar">
+                                <div>
+                                    <div class="testimonial-name">Dr. Priyantha Silva</div>
+                                    <div class="testimonial-role">Food Scientist, University of Peradeniya</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial-dots" id="testimonial-dots">
-                        <!-- Dots dynamically rendered -->
-                    </div>
+                    <div class="testimonial-dots" id="testimonial-dots"></div>
                 </div>
             </section>
 
-            <!-- 6. Seasonal Collections Carousel -->
+            <!-- Seasonal Drops -->
             <section class="section reveal-on-scroll">
-                <h2 class="section-title" style="text-align: center;">Seasonal Micro-Drops</h2>
-                <p class="section-text" style="text-align: center; max-width: 600px; margin: 0 auto 3rem auto;">Limited-edition infusions harvested during micro-seasons. Sign up to get notified when they drop.</p>
+                <h2 class="section-title" style="text-align:center;">Seasonal Micro-Drops</h2>
+                <p class="section-text" style="text-align:center;max-width:600px;margin:0 auto 3rem auto;">
+                    Limited-edition infusions harvested during Sri Lanka's micro-seasons. Subscribe below to be first in
+                    line.</p>
                 <div class="seasonal-grid">
                     <div class="seasonal-card">
-                        <img src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&w=500&q=80" alt="Rambutan Special" class="seasonal-img">
+                        <img src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&w=500&q=80"
+                            alt="Rambutan Special" class="seasonal-img">
                         <div class="seasonal-content">
                             <span class="seasonal-badge">Monsoon Harvest</span>
                             <h4>Rambutan Special</h4>
-                            <p>Exotic sweet-tart profile crafted during the July monsoon peaks.</p>
+                            <p>Exotic sweet-tart profile from lychee-like rambutans harvested during July's peak monsoon
+                                flush.</p>
                         </div>
                     </div>
                     <div class="seasonal-card">
-                        <img src="https://images.unsplash.com/photo-1590005354167-6da97870c913?auto=format&fit=crop&w=500&q=80" alt="Durian Fusion" class="seasonal-img">
+                        <img src="https://images.unsplash.com/photo-1590005354167-6da97870c913?auto=format&fit=crop&w=500&q=80"
+                            alt="Durian Fusion" class="seasonal-img">
                         <div class="seasonal-content">
                             <span class="seasonal-badge">Bold Reserve</span>
                             <h4>Durian Fusion</h4>
-                            <p>A creamy, complex gourmet blend for adventurous palates.</p>
+                            <p>A creamy, daring gourmet blend for the adventurous. Limited to 500 bottles per season.
+                            </p>
                         </div>
                     </div>
                     <div class="seasonal-card">
-                        <img src="https://images.unsplash.com/photo-1517260911058-0fcfd733c0f6?auto=format&fit=crop&w=500&q=80" alt="Tropical Summer Blend" class="seasonal-img">
+                        <img src="https://images.unsplash.com/photo-1517260911058-0fcfd733c0f6?auto=format&fit=crop&w=500&q=80"
+                            alt="Tropical Summer" class="seasonal-img">
                         <div class="seasonal-content">
                             <span class="seasonal-badge">Summer Drop</span>
                             <h4>Tropical Summer</h4>
-                            <p>A vibrant, zesty fusion of pineapples, lime, and raw sugar cane.</p>
+                            <p>Pineapple, lime, raw ginger, and a splash of king coconut water — pure Colombo summer in
+                                a bottle.</p>
                         </div>
                     </div>
                     <div class="seasonal-card">
-                        <img src="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=500&q=80" alt="Avurudu Collection" class="seasonal-img">
+                        <img src="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=500&q=80"
+                            alt="Avurudu Collection" class="seasonal-img">
                         <div class="seasonal-content">
                             <span class="seasonal-badge">Festival Edition</span>
                             <h4>Avurudu Collection</h4>
-                            <p>Infused with sweet jaggery and spices to celebrate the New Year.</p>
+                            <p>Infused with Jaggery, kithul treacle, and warming spices — crafted to celebrate Sinhala
+                                New Year.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- 7. Newsletter Section -->
+            <!-- Newsletter -->
             <section class="section reveal-on-scroll" id="newsletter">
-                <div class="glass-card" style="text-align: center; max-width: 800px; margin: 0 auto;">
-                    <h3 class="section-title">Stay Connected to the Island</h3>
-                    <p class="section-text" style="max-width: 600px; margin: 0 auto 2.5rem auto;">Receive exclusive allocations of seasonal drops, stories of local farming estates, and subscriber-only recipes.</p>
-                    <form class="newsletter-form" style="max-width: 500px; margin: 0 auto;" onsubmit="event.preventDefault(); alert('Subscribed! Welcome to the island mailing list.');">
-                        <input type="email" placeholder="Enter your email address" class="newsletter-input" required>
+                <div class="glass-card" style="text-align:center;max-width:800px;margin:0 auto;">
+                    <h3 class="section-title">Stay Close to the Island</h3>
+                    <p class="section-text" style="max-width:580px;margin:0 auto 2.5rem auto;">Get first access to
+                        seasonal drops, farm partner stories, and subscriber-only recipes. No spam — just the good
+                        stuff.</p>
+                    <form class="newsletter-form" style="max-width:500px;margin:0 auto;"
+                        onsubmit="event.preventDefault();this.querySelector('input').value='';this.querySelector('button').innerHTML='✓ You\'re on the list';setTimeout(()=>this.querySelector('button').innerHTML=`<svg width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><line x1='5' y1='12' x2='19' y2='12'/><polyline points='12 5 19 12 12 19'/></svg>`,3000);">
+                        <input type="email" placeholder="your@email.com" class="newsletter-input" required>
                         <button type="submit" class="newsletter-submit" aria-label="Subscribe">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                                <polyline points="12 5 19 12 12 19" />
                             </svg>
                         </button>
                     </form>
                 </div>
             </section>
+
+            <!-- Next Flavor CTA -->
+            <div class="next-flavor-strip" id="next-flavor-cta-btn">
+                <div class="next-flavor-bg" id="next-flavor-bg-grad"></div>
+                <p
+                    style="font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:rgba(255,255,255,0.5);margin-bottom:0.5rem;">
+                    Next Flavor</p>
+                <h3 id="next-flavor-title">King Coconut</h3>
+                <p>Click to explore →</p>
+            </div>
         </div>
     </main>
 
@@ -345,21 +326,25 @@
             <div class="footer-brand">
                 <a href="index.html" class="brand" style="padding:0;">
                     <svg class="brand-icon" viewBox="0 0 24 24">
-                        <path d="M19.5,9.5C18.8,7.9 17.5,6.5 15.8,5.8C14.1,5.1 12.2,5 10.5,5.5L13.5,2.5L12,1L6,7L12,13L13.5,11.5L10.9,8.9C12.1,8.5 13.5,8.6 14.7,9.1C15.9,9.6 16.8,10.6 17.3,11.8C17.8,13 17.8,14.4 17.3,15.6C16.8,16.8 15.9,17.7 14.7,18.2C13.5,18.7 12.1,18.7 10.9,18.2L9.5,19.6C11.3,20.5 13.5,20.6 15.4,19.9C17.3,19.2 18.8,17.7 19.5,15.8C20.2,13.8 20.2,11.6 19.5,9.5Z" />
-                        <path d="M8,10.5C7.2,10.5 6.5,11.2 6.5,12C6.5,12.8 7.2,13.5 8,13.5C8.8,13.5 9.5,12.8 9.5,12C9.5,11.2 8.8,10.5 8,10.5Z" />
+                        <path
+                            d="M12,2C9,2 6.5,4 5.5,6.8C4.5,9.6 5,12.5 6.5,14.8C8,17.1 10,18.5 12,20C14,18.5 16,17.1 17.5,14.8C19,12.5 19.5,9.6 18.5,6.8C17.5,4 15,2 12,2Z" />
+                        <path d="M12,6C12,6 8,9 8,13C8,15.2 9.8,17 12,17C14.2,17 16,15.2 16,13C16,9 12,6 12,6Z"
+                            fill="rgba(255,255,255,0.4)" />
                     </svg>
-                    <span class="brand-text">Nano Banana</span>
+                    <span class="brand-text">Island Squeeze</span>
                 </a>
-                <p>Taste the Island. Drink the Future. Cold-pressed beverages inspired by Sri Lankan nature, supporting agricultural preservation and smallholder livelihoods.</p>
+                <p>Taste the Island. Drink the Truth. Sri Lanka's first cold-pressed juice brand — raw, pure, and
+                    supporting smallholder farmers across the island.</p>
             </div>
             <div class="footer-col">
-                <h4>Navigation</h4>
+                <h4>Navigate</h4>
                 <ul class="footer-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="flavors.html">Flavor Collection</a></li>
                     <li><a href="about.html">About Sri Lanka</a></li>
                     <li><a href="farm-to-bottle.html">Our Process</a></li>
                     <li><a href="experience.html">Experience Map</a></li>
+                    <li><a href="impact.html">Our Impact</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -367,26 +352,29 @@
                 <ul class="footer-links">
                     <li><a href="gallery.html">Media Gallery</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="#">F.A.Q. Sheet</a></li>
+                    <li><a href="#">F.A.Q.</a></li>
                     <li><a href="#">Sourcing Principles</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Support Centre</h4>
-                <ul class="footer-links" style="color: rgba(255,255,255,0.5); font-size:0.95rem; line-height: 1.6;">
-                    <li>Email: <a href="mailto:hello@nanobanana.com" style="display:inline; color:inherit;">hello@nanobanana.com</a></li>
-                    <li>Hotline: <a href="tel:+94112345678" style="display:inline; color:inherit;">+94 11 234 5678</a></li>
-                    <li>Colombo, Sri Lanka</li>
+                <h4>Get in Touch</h4>
+                <ul class="footer-links" style="color:rgba(255,255,255,0.5);font-size:0.95rem;line-height:1.6;">
+                    <li>Email: <a href="mailto:hello@islandsqueeze.lk"
+                            style="display:inline;color:inherit;">hello@islandsqueeze.lk</a></li>
+                    <li>Hotline: <a href="tel:+94112345678" style="display:inline;color:inherit;">+94 11 234 5678</a>
+                    </li>
+                    <li>No. 14, Flower Road, Colombo 07</li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Nano Banana. All rights reserved.</p>
-            <p>Designed with &hearts; for Sri Lanka.</p>
+            <p>&copy; 2026 Island Squeeze (Pvt) Ltd. All rights reserved.</p>
+            <p>Made with ♥ in Sri Lanka.</p>
         </div>
     </footer>
 
     <script src="app.js"></script>
 </body>
+
 </html>

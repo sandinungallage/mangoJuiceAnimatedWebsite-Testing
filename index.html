@@ -2,379 +2,1461 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Island Squeeze | Sri Lanka's Premium Cold-Pressed Juice</title>
-    <meta name="description"
-        content="Island Squeeze — cold-pressed juices crafted from Sri Lanka's finest tropical fruits. Pure, raw, and delivered chilled island-wide.">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Island Squeeze — Sri Lanka's Cold-Pressed Juice</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --green: #22C55E;
+            --green-dark: #16a34a;
+            --green-deep: #0a2a12;
+            --green-mid: #1a3d1a;
+            --yellow: #FCD34D;
+            --yellow-soft: #fef9c3;
+            --white: #ffffff;
+            --off-white: #f8faf8;
+            --text: #0f1f10;
+            --text-mid: #3d5c3f;
+            --text-muted: #6b8f6e;
+            --border: rgba(34, 197, 94, 0.15);
+            --card-bg: #ffffff;
+            --radius: 16px;
+            --radius-sm: 10px;
+            --radius-pill: 100px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--off-white);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ── NAVBAR ── */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+            height: 64px;
+            background: rgba(248, 250, 248, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            transition: box-shadow 0.2s;
+        }
+
+        .navbar.scrolled {
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .brand-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--green), var(--yellow));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .brand-text {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            color: var(--text-mid);
+            text-decoration: none;
+            transition: background 0.15s, color 0.15s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            background: rgba(34, 197, 94, 0.1);
+            color: var(--green-dark);
+        }
+
+        .order-btn {
+            background: linear-gradient(135deg, var(--green), var(--green-dark));
+            color: #fff;
+            font-size: 0.88rem;
+            font-weight: 600;
+            padding: 9px 22px;
+            border-radius: var(--radius-pill);
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.15s, box-shadow 0.15s;
+            box-shadow: 0 4px 14px rgba(34, 197, 94, 0.3);
+        }
+
+        .order-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+        }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(150deg, #062010 0%, #0d2e12 40%, #0a2810 70%, #071c0a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 8rem 2rem 5rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 60% at 20% 60%, rgba(34, 197, 94, 0.18) 0%, transparent 60%),
+                radial-gradient(ellipse 40% 40% at 80% 30%, rgba(252, 211, 77, 0.12) 0%, transparent 55%),
+                radial-gradient(ellipse 30% 50% at 60% 80%, rgba(34, 197, 94, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 4rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(34, 197, 94, 0.12);
+            border: 1px solid rgba(34, 197, 94, 0.25);
+            color: #4ade80;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            padding: 5px 14px;
+            border-radius: var(--radius-pill);
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            color: #fff;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 .accent {
+            background: linear-gradient(90deg, var(--green), var(--yellow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.75;
+            margin-bottom: 2.5rem;
+            max-width: 440px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--green), var(--green-dark));
+            color: #fff;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 13px 30px;
+            border-radius: var(--radius-pill);
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 6px 24px rgba(34, 197, 94, 0.35);
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(34, 197, 94, 0.45);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 13px 24px;
+            border-radius: var(--radius-pill);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            text-decoration: none;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        .btn-ghost:hover {
+            border-color: rgba(255, 255, 255, 0.45);
+            color: #fff;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 2rem;
+        }
+
+        .hero-stat-num {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1;
+        }
+
+        .hero-stat-num span {
+            color: var(--green);
+        }
+
+        .hero-stat-label {
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.45);
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        /* Hero visual side */
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-bottle-ring {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            border: 1px solid rgba(34, 197, 94, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            animation: spin-slow 20s linear infinite;
+        }
+
+        .hero-bottle-ring::before {
+            content: '';
+            position: absolute;
+            inset: -16px;
+            border-radius: 50%;
+            border: 1px dashed rgba(252, 211, 77, 0.15);
+        }
+
+        @keyframes spin-slow {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .orbit-dot {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--green);
+        }
+
+        .orbit-dot:nth-child(1) {
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .orbit-dot:nth-child(2) {
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--yellow);
+        }
+
+        .orbit-dot:nth-child(3) {
+            left: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(34, 197, 94, 0.5);
+        }
+
+        .orbit-dot:nth-child(4) {
+            right: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(252, 211, 77, 0.5);
+        }
+
+        .hero-bottle-inner {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 35% 35%, rgba(34, 197, 94, 0.3), rgba(34, 197, 94, 0.05));
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: spin-slow 20s linear infinite reverse;
+            text-align: center;
+            gap: 8px;
+        }
+
+        .hero-bottle-emoji {
+            font-size: 3.5rem;
+        }
+
+        .hero-bottle-label {
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .hero-badges {
+            position: absolute;
+            top: 10%;
+            right: -10%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .hero-badge-chip {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-pill);
+            padding: 7px 14px;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.7);
+            white-space: nowrap;
+            backdrop-filter: blur(8px);
+        }
+
+        /* ── SECTIONS ── */
+        .section {
+            padding: 6rem 2rem;
+        }
+
+        .section-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--green-dark);
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        .section-label::before {
+            content: '';
+            width: 24px;
+            height: 2px;
+            background: var(--green);
+            border-radius: 2px;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: var(--text);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .section-sub {
+            font-size: 1rem;
+            color: var(--text-muted);
+            max-width: 520px;
+            line-height: 1.75;
+        }
+
+        .section-header {
+            margin-bottom: 3.5rem;
+        }
+
+        /* ── WHY US ── */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .why-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: var(--radius);
+            padding: 2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .why-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .why-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.12), rgba(34, 197, 94, 0.04));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 1.25rem;
+            border: 1px solid rgba(34, 197, 94, 0.15);
+        }
+
+        .why-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+            color: var(--text);
+        }
+
+        .why-card p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.65;
+        }
+
+        /* ── FLAVORS ── */
+        .flavors-section {
+            background: var(--green-deep);
+        }
+
+        .flavors-section .section-title {
+            color: #fff;
+        }
+
+        .flavors-section .section-sub {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .flavors-section .section-label {
+            color: #4ade80;
+        }
+
+        .flavors-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.25rem;
+        }
+
+        .flavor-card {
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .flavor-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .flavor-thumb {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .flavor-body {
+            padding: 1.25rem;
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .flavor-name {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+
+        .flavor-desc {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .flavor-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: var(--radius-pill);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .tag-green {
+            background: rgba(34, 197, 94, 0.15);
+            color: #4ade80;
+        }
+
+        .tag-yellow {
+            background: rgba(252, 211, 77, 0.15);
+            color: #fde68a;
+        }
+
+        .tag-coral {
+            background: rgba(251, 113, 133, 0.15);
+            color: #fda4af;
+        }
+
+        .tag-purple {
+            background: rgba(167, 139, 250, 0.15);
+            color: #c4b5fd;
+        }
+
+        /* ── PROCESS STRIP ── */
+        .process-strip {
+            background: #fff;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            position: relative;
+            gap: 0;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 28px;
+            left: 12.5%;
+            right: 12.5%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--green), var(--yellow));
+            z-index: 0;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 0 1.5rem 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-dot {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--green), var(--green-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            margin: 0 auto 1.25rem;
+            box-shadow: 0 4px 14px rgba(34, 197, 94, 0.35);
+        }
+
+        .process-step h4 {
+            font-size: 0.92rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+            color: var(--text);
+        }
+
+        .process-step p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.55;
+        }
+
+        /* ── IMPACT COUNTERS ── */
+        .impact-section {
+            background: linear-gradient(135deg, #062010, #0d2e12);
+        }
+
+        .impact-section .section-title {
+            color: #fff;
+        }
+
+        .impact-section .section-sub {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .impact-section .section-label {
+            color: #4ade80;
+        }
+
+        .counters-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .counter-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .counter-num {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--green);
+            line-height: 1;
+        }
+
+        .counter-unit {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--yellow);
+        }
+
+        .counter-label {
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.45);
+            margin-top: 8px;
+            line-height: 1.4;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        /* ── TESTIMONIALS ── */
+        .testimonials-section {
+            background: var(--off-white);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .testimonial-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: var(--radius);
+            padding: 2rem;
+        }
+
+        .stars {
+            color: var(--yellow);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            font-size: 0.92rem;
+            color: var(--text-mid);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .author-avatar {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--green), var(--yellow));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .author-name {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .author-location {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        /* ── ORIGIN STORY ── */
+        .origin-section {
+            background: #fff;
+        }
+
+        .origin-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 5rem;
+        }
+
+        .origin-img {
+            border-radius: var(--radius);
+            background: linear-gradient(135deg, #0d2e12, #1a4d20);
+            height: 460px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .origin-img::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 30% 40%, rgba(34, 197, 94, 0.2), transparent 60%),
+                radial-gradient(ellipse at 70% 70%, rgba(252, 211, 77, 0.1), transparent 50%);
+        }
+
+        .origin-img span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .origin-text h2 {
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.25rem;
+        }
+
+        .origin-text p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+        }
+
+        .origin-pills {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .origin-pill {
+            background: rgba(34, 197, 94, 0.08);
+            border: 1px solid rgba(34, 197, 94, 0.2);
+            color: var(--green-dark);
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: var(--radius-pill);
+        }
+
+        /* ── CTA BAND ── */
+        .cta-band {
+            background: linear-gradient(135deg, var(--green-deep), #102810);
+            padding: 5rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-band::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 50% 80% at 50% 50%, rgba(34, 197, 94, 0.15), transparent 65%);
+        }
+
+        .cta-band-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-band h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 1rem;
+            letter-spacing: -0.03em;
+        }
+
+        .cta-band h2 span {
+            color: var(--green);
+        }
+
+        .cta-band p {
+            color: rgba(255, 255, 255, 0.55);
+            font-size: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-row {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: #040e06;
+            color: rgba(255, 255, 255, 0.6);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--green), var(--yellow));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .footer-brand-name {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .footer-brand p {
+            font-size: 0.82rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.4);
+            max-width: 260px;
+        }
+
+        .footer-col h4 {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-col ul li a {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.45);
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--green);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.25);
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .footer-green {
+            color: var(--green);
+        }
+
+        /* ── SCROLL REVEAL ── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.55s ease, transform 0.55s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 900px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 3rem;
+            }
+
+            .hero p {
+                margin: 0 auto 2.5rem;
+            }
+
+            .hero-actions {
+                justify-content: center;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                order: -1;
+            }
+
+            .hero-badges {
+                display: none;
+            }
+
+            .why-grid,
+            .flavors-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .counters-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .origin-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                padding: 0 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .why-grid,
+            .flavors-grid,
+            .process-steps,
+            .counters-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .section {
+                padding: 4rem 1.25rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
-        <defs>
-            <linearGradient id="brand-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#22C55E" />
-                <stop offset="100%" stop-color="#FCD34D" />
-            </linearGradient>
-        </defs>
-    </svg>
 
-    <!-- Navigation -->
+    <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
         <a href="index.html" class="brand">
-            <svg class="brand-icon" viewBox="0 0 24 24">
-                <path
-                    d="M12,2C9,2 6.5,4 5.5,6.8C4.5,9.6 5,12.5 6.5,14.8C8,17.1 10,18.5 12,20C14,18.5 16,17.1 17.5,14.8C19,12.5 19.5,9.6 18.5,6.8C17.5,4 15,2 12,2Z" />
-                <path d="M12,6C12,6 8,9 8,13C8,15.2 9.8,17 12,17C14.2,17 16,15.2 16,13C16,9 12,6 12,6Z"
-                    fill="rgba(255,255,255,0.4)" />
-            </svg>
+            <div class="brand-icon">🍃</div>
             <span class="brand-text">Island Squeeze</span>
         </a>
         <ul class="nav-links">
-            <li><a href="index.html" class="nav-link active">Home</a></li>
-            <li><a href="flavors.html" class="nav-link">Flavors</a></li>
-            <li><a href="about.html" class="nav-link">Sri Lanka</a></li>
-            <li><a href="farm-to-bottle.html" class="nav-link">Our Process</a></li>
-            <li><a href="experience.html" class="nav-link">Map Experience</a></li>
-            <li><a href="impact.html" class="nav-link">Impact</a></li>
-            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="flavors.html">Flavors</a></li>
+            <li><a href="about.html">Sri Lanka</a></li>
+            <li><a href="farm-to-bottle.html">Our Process</a></li>
+            <li><a href="experience.html">Map Experience</a></li>
+            <li><a href="impact.html">Impact</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
-        <a href="flavors.html" class="order-btn pulse-glow" id="nav-order-btn">Order Now</a>
+        <a href="flavors.html" class="order-btn">Order Now</a>
     </nav>
 
     <main>
-        <!-- Hero -->
-        <section class="video-container">
-            <video class="video-bg" autoplay loop muted playsinline>
-                <source
-                    src="https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c054e54b073c10472eec2e5c7cf99e52&profile_id=139&oauth2_token_id=57447761"
-                    type="video/mp4">
-            </video>
-            <div class="video-overlay"></div>
-            <div class="video-content">
-                <h1 class="glow-text">Taste the Island.<br>Drink the Truth.</h1>
-                <p>Sri Lanka's finest tropical fruits. Cold-pressed raw. No heat. No additives. Delivered island-wide in
-                    24 hours.</p>
-                <div class="video-btns">
-                    <a href="flavors.html" class="order-btn">Explore Flavors</a>
-                    <a href="about.html" class="outline-btn">Discover Sri Lanka</a>
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <div class="hero-eyebrow">🌿 Cold-Pressed · Farm-to-Bottle · 24 Hours</div>
+                    <h1>Taste the <span class="accent">Pure Soul</span> of Sri Lanka</h1>
+                    <p>From hand-picked fruit harvested before dawn to chilled bottles at your door — Island Squeeze is
+                        Sri Lanka's first cold-pressed juice, made with zero compromise.</p>
+                    <div class="hero-actions">
+                        <a href="flavors.html" class="btn-primary">Shop Flavors</a>
+                        <a href="farm-to-bottle.html" class="btn-ghost">See Our Process →</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div>
+                            <div class="hero-stat-num">47<span>+</span></div>
+                            <div class="hero-stat-label">Partner Farms</div>
+                        </div>
+                        <div>
+                            <div class="hero-stat-num">24<span>h</span></div>
+                            <div class="hero-stat-label">Farm to Bottle</div>
+                        </div>
+                        <div>
+                            <div class="hero-stat-num">0<span>%</span></div>
+                            <div class="hero-stat-label">Additives Added</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-bottle-ring">
+                        <div class="orbit-dot"></div>
+                        <div class="orbit-dot"></div>
+                        <div class="orbit-dot"></div>
+                        <div class="orbit-dot"></div>
+                        <div class="hero-bottle-inner">
+                            <div class="hero-bottle-emoji">🍋</div>
+                            <div class="hero-bottle-label">Cold Pressed</div>
+                        </div>
+                    </div>
+                    <div class="hero-badges">
+                        <div class="hero-badge-chip">🌱 Organic Certified</div>
+                        <div class="hero-badge-chip">❄️ Cold Chain Always</div>
+                        <div class="hero-badge-chip">☀️ Solar Pressery</div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Scrollytelling -->
-        <div class="scrolly-container" id="scrollytelling-container">
-            <div class="sticky-viewport">
-                <div class="canvas-wrapper">
-                    <canvas id="bottle-canvas"></canvas>
+        <!-- WHY US -->
+        <section class="section" style="background:#fff;">
+            <div class="section-inner">
+                <div class="section-header reveal">
+                    <div class="section-label">Why Island Squeeze</div>
+                    <h2 class="section-title">Juice the way it should be.</h2>
+                    <p class="section-sub">We built everything from scratch to protect what actually matters — the
+                        nutrition, the farmers, and the island.</p>
                 </div>
-                <div class="overlay-text-container" id="overlay-container">
-                    <div class="overlay-section align-center" id="overlay-sec-1">
-                        <h2 class="glow-text" id="sec1-title">Ceylon Mango.</h2>
-                        <p id="sec1-subtitle">Liquid gold from the north.</p>
+                <div class="why-grid">
+                    <div class="why-card reveal">
+                        <div class="why-icon">⚡</div>
+                        <h3>Hydraulic Cold Press</h3>
+                        <p>6,000 PSI of slow pressure — no blades, no centrifuges, no heat. Fragile enzymes and
+                            antioxidants are fully preserved from press to bottle.</p>
                     </div>
-                    <div class="overlay-section align-left" id="overlay-sec-2">
-                        <h2 id="sec2-title">Bursting with fresh mango.</h2>
-                        <p id="sec2-subtitle">Hand-picked Willard mangoes from Jaffna's dry-zone orchards.</p>
+                    <div class="why-card reveal">
+                        <div class="why-icon">🧊</div>
+                        <h3>Unbroken Cold Chain</h3>
+                        <p>Fruit enters refrigeration at 4°C at the moment of harvest and never leaves it.
+                            Temperature-controlled vehicles, pressery, and delivery packaging.</p>
                     </div>
-                    <div class="overlay-section align-right" id="overlay-sec-3">
-                        <h2 id="sec3-title">Vitamin-rich refreshment.</h2>
-                        <p id="sec3-subtitle">No additives, no compromise. Just pure tropical vitality.</p>
+                    <div class="why-card reveal">
+                        <div class="why-icon">🔬</div>
+                        <h3>Lab-Tested Every Batch</h3>
+                        <p>Zero shortcuts. Every batch is tested for pesticide residue, microbial safety, pH, and
+                            nutritional density before a single bottle is filled.</p>
                     </div>
-                    <div class="overlay-section align-left" id="overlay-sec-4">
-                        <h2 id="sec4-title">Made from fruit, not concentrate.</h2>
-                        <p id="sec4-subtitle"></p>
+                    <div class="why-card reveal">
+                        <div class="why-icon">🌿</div>
+                        <h3>100% Sri Lankan Fruit</h3>
+                        <p>Every ingredient is sourced from vetted partner farms across the island. Never imported.
+                            Never frozen. Always raw and in-season.</p>
+                    </div>
+                    <div class="why-card reveal">
+                        <div class="why-icon">♻️</div>
+                        <h3>Zero-Waste Operations</h3>
+                        <p>Pulp becomes fertilizer. Wastewater becomes irrigation. Our facility runs on 80% solar. We're
+                            targeting full carbon neutrality by Q4 2026.</p>
+                    </div>
+                    <div class="why-card reveal">
+                        <div class="why-icon">🤝</div>
+                        <h3>Fair Farmer Pay</h3>
+                        <p>Our 47 partner farms earn a minimum of 40% above market rates, plus irrigation equipment,
+                            crop insurance, and seasonal training from our team.</p>
                     </div>
                 </div>
-                <div class="nav-arrows" style="position:absolute;">
-                    <button class="nav-arrow" id="prev-flavor-btn" aria-label="Previous Flavor">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="19" y1="12" x2="5" y2="12" />
-                            <polyline points="12 19 5 12 12 5" />
-                        </svg>
-                    </button>
-                    <button class="nav-arrow" id="next-flavor-btn" aria-label="Next Flavor">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12" />
-                            <polyline points="12 5 19 12 12 19" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="flavor-pill-menu" id="flavor-menu" style="position:absolute;"></div>
             </div>
-        </div>
+        </section>
 
-        <!-- Content Sections -->
-        <div class="content-sections">
-
-            <!-- Product Details -->
-            <section class="section reveal-on-scroll" id="details">
-                <div class="reveal-grid">
-                    <div class="glass-card">
-                        <h3 class="section-title" id="details-title">The North's Finest Mango</h3>
-                        <p class="section-text" id="details-description">Our Ceylon Mango juice sources exclusively from
-                            smallholder family farms in the Jaffna and Vavuniya dry zones.</p>
-                        <div class="features-container" id="details-features"></div>
-                    </div>
-                    <div class="glass-card">
-                        <h3 class="section-title" style="margin-bottom:2.5rem;">Nutrition Facts</h3>
-                        <div class="stats-grid" id="details-stats"></div>
-                    </div>
+        <!-- FLAVORS -->
+        <section class="section flavors-section">
+            <div class="section-inner">
+                <div class="section-header reveal">
+                    <div class="section-label">Our Collection</div>
+                    <h2 class="section-title">This season's flavors.</h2>
+                    <p class="section-sub">Small-batch, single-origin juice. Each bottle is tied to a specific farm, a
+                        specific harvest, and a specific day.</p>
                 </div>
-            </section>
-
-            <!-- Freshness -->
-            <section class="section reveal-on-scroll">
-                <div class="freshness-section">
-                    <div>
-                        <h3 class="section-title" id="freshness-title">From Orchard to Bottle</h3>
-                        <p class="section-text" id="freshness-description">We believe absolute transparency is
-                            non-negotiable. Our entire supply chain takes under 24 hours.</p>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&w=700&q=80"
-                        alt="Cold Pressing Process" class="freshness-img">
-                </div>
-            </section>
-
-            <!-- Counters -->
-            <section class="section reveal-on-scroll">
-                <div class="counters-section">
-                    <div class="counter-card">
-                        <div class="counter-number" data-count="47" data-suffix="+">0+</div>
-                        <div class="counter-label">Farm Partners</div>
-                    </div>
-                    <div class="counter-card">
-                        <div class="counter-number" data-count="8">0</div>
-                        <div class="counter-label">Juice Varieties</div>
-                    </div>
-                    <div class="counter-card">
-                        <div class="counter-number" data-count="24" data-suffix="h">0h</div>
-                        <div class="counter-label">Farm to Bottle</div>
-                    </div>
-                    <div class="counter-card">
-                        <div class="counter-number" data-count="0">0</div>
-                        <div class="counter-label">Additives</div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Buy Now -->
-            <section class="section reveal-on-scroll">
-                <div class="glass-card">
-                    <div class="buy-section">
-                        <div>
-                            <p
-                                style="font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,0.4);margin-bottom:0.75rem;">
-                                Now Available</p>
-                            <h3 class="section-title" style="font-size:3.5rem;" id="buy-product-name">Ceylon Mango</h3>
-                            <p style="color:rgba(255,255,255,0.5);margin-bottom:1.5rem;" id="buy-product-subname">Liquid
-                                gold from the north.</p>
-                            <div class="buy-price-display" id="buy-price">Rs. 650</div>
-                            <div class="buy-unit" id="buy-unit">per 300ml bottle</div>
-                            <div class="buy-params" id="buy-params-list"></div>
-                            <p class="buy-delivery-note" id="buy-delivery">Same-day delivery across Colombo.</p>
-                            <p class="buy-delivery-note" id="buy-policy">100% satisfaction guaranteed.</p>
+                <div class="flavors-grid">
+                    <div class="flavor-card reveal">
+                        <div class="flavor-thumb" style="background:linear-gradient(135deg,#0d3a12,#1a5e20);">🍋</div>
+                        <div class="flavor-body">
+                            <div class="flavor-name">Ceylon Lime & Ginger</div>
+                            <div class="flavor-desc">Sharp, bright, and warming. Lime from Matara district with raw
+                                Kandy ginger.</div>
+                            <span class="flavor-tag tag-green">Bestseller</span>
                         </div>
-                        <div style="display:flex;flex-direction:column;gap:1rem;">
-                            <a href="flavors.html" class="checkout-btn" id="buy-checkout-btn">Order This Flavor →</a>
-                            <a href="flavors.html" class="outline-btn"
-                                style="text-align:center;display:block;padding:1rem;">View All Flavors</a>
+                    </div>
+                    <div class="flavor-card reveal">
+                        <div class="flavor-thumb" style="background:linear-gradient(135deg,#3a2000,#7a4800);">🥭</div>
+                        <div class="flavor-body">
+                            <div class="flavor-name">Willard Mango Pure</div>
+                            <div class="flavor-desc">Single-variety Willard mango from Jaffna. Nothing added, nothing
+                                removed.</div>
+                            <span class="flavor-tag tag-yellow">Seasonal</span>
+                        </div>
+                    </div>
+                    <div class="flavor-card reveal">
+                        <div class="flavor-thumb" style="background:linear-gradient(135deg,#2a0a30,#5a1a60);">🍇</div>
+                        <div class="flavor-body">
+                            <div class="flavor-name">Wood Apple & Turmeric</div>
+                            <div class="flavor-desc">Ancient Sri Lankan flavour. Earthy, complex, anti-inflammatory
+                                gold.</div>
+                            <span class="flavor-tag tag-purple">New Arrival</span>
+                        </div>
+                    </div>
+                    <div class="flavor-card reveal">
+                        <div class="flavor-thumb" style="background:linear-gradient(135deg,#3a0a0a,#7a1a1a);">🍓</div>
+                        <div class="flavor-body">
+                            <div class="flavor-name">Passion Fruit & Hibiscus</div>
+                            <div class="flavor-desc">Tart, floral, and deeply refreshing. Hibiscus flowers from
+                                Anuradhapura.</div>
+                            <span class="flavor-tag tag-coral">Limited</span>
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <!-- Testimonials -->
-            <section class="section reveal-on-scroll">
-                <h2 class="section-title" style="text-align:center;margin-bottom:3rem;">What the Island Is Saying</h2>
-                <div class="testimonials-container">
-                    <div class="testimonials-track">
-                        <div class="testimonial-slide">
-                            <p class="testimonial-quote">"The Ceylon Mango is extraordinary — I've tasted fresh-squeezed
-                                juice across Southeast Asia and nothing comes close to the depth of flavour in Island
-                                Squeeze. It tastes like the fruit itself, not a product."</p>
-                            <div class="testimonial-user">
-                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&h=120&q=80"
-                                    alt="Dilini Perera" class="testimonial-avatar">
-                                <div>
-                                    <div class="testimonial-name">Dilini Perera</div>
-                                    <div class="testimonial-role">Nutritionist, Colombo</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-slide">
-                            <p class="testimonial-quote">"As a professional athlete I'm obsessive about what I put in my
-                                body. King Coconut from Island Squeeze replaced every commercial sports drink in my
-                                regime. Natural electrolytes, zero junk — it's irreplaceable."</p>
-                            <div class="testimonial-user">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&h=120&q=80"
-                                    alt="Arjun Senanayake" class="testimonial-avatar">
-                                <div>
-                                    <div class="testimonial-name">Arjun Senanayake</div>
-                                    <div class="testimonial-role">National Swimmer</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-slide">
-                            <p class="testimonial-quote">"The Ruby Pomegranate is a beautiful tribute to what Sri Lankan
-                                agriculture can produce at its finest. Island Squeeze is doing something genuinely
-                                important — celebrating local flavours without compromise."</p>
-                            <div class="testimonial-user">
-                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&h=120&q=80"
-                                    alt="Dr. Priyantha Silva" class="testimonial-avatar">
-                                <div>
-                                    <div class="testimonial-name">Dr. Priyantha Silva</div>
-                                    <div class="testimonial-role">Food Scientist, University of Peradeniya</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-dots" id="testimonial-dots"></div>
+                <div style="text-align:center;margin-top:2.5rem;">
+                    <a href="flavors.html" class="btn-primary">View All Flavors</a>
                 </div>
-            </section>
-
-            <!-- Seasonal Drops -->
-            <section class="section reveal-on-scroll">
-                <h2 class="section-title" style="text-align:center;">Seasonal Micro-Drops</h2>
-                <p class="section-text" style="text-align:center;max-width:600px;margin:0 auto 3rem auto;">
-                    Limited-edition infusions harvested during Sri Lanka's micro-seasons. Subscribe below to be first in
-                    line.</p>
-                <div class="seasonal-grid">
-                    <div class="seasonal-card">
-                        <img src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&w=500&q=80"
-                            alt="Rambutan Special" class="seasonal-img">
-                        <div class="seasonal-content">
-                            <span class="seasonal-badge">Monsoon Harvest</span>
-                            <h4>Rambutan Special</h4>
-                            <p>Exotic sweet-tart profile from lychee-like rambutans harvested during July's peak monsoon
-                                flush.</p>
-                        </div>
-                    </div>
-                    <div class="seasonal-card">
-                        <img src="https://images.unsplash.com/photo-1590005354167-6da97870c913?auto=format&fit=crop&w=500&q=80"
-                            alt="Durian Fusion" class="seasonal-img">
-                        <div class="seasonal-content">
-                            <span class="seasonal-badge">Bold Reserve</span>
-                            <h4>Durian Fusion</h4>
-                            <p>A creamy, daring gourmet blend for the adventurous. Limited to 500 bottles per season.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="seasonal-card">
-                        <img src="https://images.unsplash.com/photo-1517260911058-0fcfd733c0f6?auto=format&fit=crop&w=500&q=80"
-                            alt="Tropical Summer" class="seasonal-img">
-                        <div class="seasonal-content">
-                            <span class="seasonal-badge">Summer Drop</span>
-                            <h4>Tropical Summer</h4>
-                            <p>Pineapple, lime, raw ginger, and a splash of king coconut water — pure Colombo summer in
-                                a bottle.</p>
-                        </div>
-                    </div>
-                    <div class="seasonal-card">
-                        <img src="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=500&q=80"
-                            alt="Avurudu Collection" class="seasonal-img">
-                        <div class="seasonal-content">
-                            <span class="seasonal-badge">Festival Edition</span>
-                            <h4>Avurudu Collection</h4>
-                            <p>Infused with Jaggery, kithul treacle, and warming spices — crafted to celebrate Sinhala
-                                New Year.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Newsletter -->
-            <section class="section reveal-on-scroll" id="newsletter">
-                <div class="glass-card" style="text-align:center;max-width:800px;margin:0 auto;">
-                    <h3 class="section-title">Stay Close to the Island</h3>
-                    <p class="section-text" style="max-width:580px;margin:0 auto 2.5rem auto;">Get first access to
-                        seasonal drops, farm partner stories, and subscriber-only recipes. No spam — just the good
-                        stuff.</p>
-                    <form class="newsletter-form" style="max-width:500px;margin:0 auto;"
-                        onsubmit="event.preventDefault();this.querySelector('input').value='';this.querySelector('button').innerHTML='✓ You\'re on the list';setTimeout(()=>this.querySelector('button').innerHTML=`<svg width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><line x1='5' y1='12' x2='19' y2='12'/><polyline points='12 5 19 12 12 19'/></svg>`,3000);">
-                        <input type="email" placeholder="your@email.com" class="newsletter-input" required>
-                        <button type="submit" class="newsletter-submit" aria-label="Subscribe">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="5" y1="12" x2="19" y2="12" />
-                                <polyline points="12 5 19 12 12 19" />
-                            </svg>
-                        </button>
-                    </form>
-                </div>
-            </section>
-
-            <!-- Next Flavor CTA -->
-            <div class="next-flavor-strip" id="next-flavor-cta-btn">
-                <div class="next-flavor-bg" id="next-flavor-bg-grad"></div>
-                <p
-                    style="font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:rgba(255,255,255,0.5);margin-bottom:0.5rem;">
-                    Next Flavor</p>
-                <h3 id="next-flavor-title">King Coconut</h3>
-                <p>Click to explore →</p>
             </div>
-        </div>
+        </section>
+
+        <!-- IMPACT -->
+        <section class="section impact-section">
+            <div class="section-inner">
+                <div class="section-header reveal">
+                    <div class="section-label">Our Impact</div>
+                    <h2 class="section-title">Every bottle does more.</h2>
+                    <p class="section-sub">The numbers behind every sip — farmers supported, ecosystems protected, and
+                        plastic diverted from the ocean.</p>
+                </div>
+                <div class="counters-grid">
+                    <div class="counter-card reveal">
+                        <div class="counter-num">47</div>
+                        <div class="counter-label">Partner farms across Sri Lanka</div>
+                    </div>
+                    <div class="counter-card reveal">
+                        <div class="counter-num">40<span class="counter-unit">%</span></div>
+                        <div class="counter-label">Above market rate, guaranteed</div>
+                    </div>
+                    <div class="counter-card reveal">
+                        <div class="counter-num">120</div>
+                        <div class="counter-label">Solar panels powering the pressery</div>
+                    </div>
+                    <div class="counter-card reveal">
+                        <div class="counter-num">0</div>
+                        <div class="counter-label">Additives, preservatives, or heat used</div>
+                    </div>
+                </div>
+                <div style="text-align:center;">
+                    <a href="impact.html" class="btn-primary">See Full Impact Report</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="section testimonials-section">
+            <div class="section-inner">
+                <div class="section-header reveal" style="text-align:center;">
+                    <div class="section-label" style="justify-content:center;">What People Say</div>
+                    <h2 class="section-title">Colombo's favourite morning ritual.</h2>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card reveal">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"I've tried every premium juice brand in Sri Lanka. Island Squeeze
+                            is the only one that genuinely tastes like fresh fruit squeezed at home — except somehow
+                            better."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AP</div>
+                            <div>
+                                <div class="author-name">Ayesha Perera</div>
+                                <div class="author-location">Colombo 07</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card reveal">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"The Willard Mango is something else entirely. You can taste exactly
+                            where it came from. I've been ordering weekly since the first delivery and I'm not
+                            stopping."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">RS</div>
+                            <div>
+                                <div class="author-name">Rohan Silva</div>
+                                <div class="author-location">Kandy</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card reveal">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"As a nutritionist, I recommend Island Squeeze to every single one
+                            of my clients. The cold-press HPP process is the real deal — you can taste the difference in
+                            the nutrient density."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">NF</div>
+                            <div>
+                                <div class="author-name">Dr. Nadia Fernando</div>
+                                <div class="author-location">Registered Nutritionist, Colombo</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ORIGIN STORY -->
+        <section class="section origin-section">
+            <div class="section-inner">
+                <div class="origin-grid">
+                    <div class="origin-img"><span>🌴</span></div>
+                    <div class="origin-text reveal">
+                        <div class="section-label">Our Story</div>
+                        <h2 class="section-title">Born from a single mango tree in Jaffna.</h2>
+                        <p>Island Squeeze started with one question: why does fresh fruit in Sri Lanka — some of the
+                            most extraordinary produce on earth — lose all its character by the time it reaches people
+                            in Colombo?</p>
+                        <p>The answer was always the supply chain. Excessive heat, long transit, oxidation, and
+                            dilution. We built Island Squeeze to fix every single one of those problems from the ground
+                            up.</p>
+                        <p>Today we partner with 47 smallholder farms across nine provinces, operate Sri Lanka's first
+                            cold-press HPP facility, and deliver to your door within 24 hours of harvest. Nothing
+                            hidden. Nothing added.</p>
+                        <div class="origin-pills">
+                            <span class="origin-pill">Founded 2023</span>
+                            <span class="origin-pill">9 Provinces</span>
+                            <span class="origin-pill">47 Farms</span>
+                            <span class="origin-pill">Colombo HQ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA BAND -->
+        <section class="cta-band">
+            <div class="cta-band-inner">
+                <h2>Ready to <span>taste the island?</span></h2>
+                <p>Free delivery on your first order. Cancel or pause any time.</p>
+                <div class="cta-row">
+                    <a href="flavors.html" class="btn-primary">Shop the Collection</a>
+                    <a href="contact.html" class="btn-ghost">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer>
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <a href="index.html" class="brand" style="padding:0;">
-                    <svg class="brand-icon" viewBox="0 0 24 24">
-                        <path
-                            d="M12,2C9,2 6.5,4 5.5,6.8C4.5,9.6 5,12.5 6.5,14.8C8,17.1 10,18.5 12,20C14,18.5 16,17.1 17.5,14.8C19,12.5 19.5,9.6 18.5,6.8C17.5,4 15,2 12,2Z" />
-                        <path d="M12,6C12,6 8,9 8,13C8,15.2 9.8,17 12,17C14.2,17 16,15.2 16,13C16,9 12,6 12,6Z"
-                            fill="rgba(255,255,255,0.4)" />
-                    </svg>
-                    <span class="brand-text">Island Squeeze</span>
-                </a>
-                <p>Taste the Island. Drink the Truth. Sri Lanka's first cold-pressed juice brand — raw, pure, and
-                    supporting smallholder farmers across the island.</p>
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-brand-row">
+                        <div class="footer-brand-icon">🍃</div>
+                        <span class="footer-brand-name">Island Squeeze</span>
+                    </div>
+                    <p>Taste the Island. Drink the Truth. Sri Lanka's first cold-pressed juice brand — raw, pure, and
+                        supporting smallholder farmers across the island.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="flavors.html">Flavor Collection</a></li>
+                        <li><a href="about.html">About Sri Lanka</a></li>
+                        <li><a href="farm-to-bottle.html">Our Process</a></li>
+                        <li><a href="impact.html">Our Impact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="gallery.html">Media Gallery</a></li>
+                        <li><a href="experience.html">Experience Map</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">F.A.Q.</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get in Touch</h4>
+                    <ul>
+                        <li><a href="mailto:hello@islandsqueeze.lk">hello@islandsqueeze.lk</a></li>
+                        <li><a href="tel:+94112345678">+94 11 234 5678</a></li>
+                        <li style="color:rgba(255,255,255,0.3);font-size:0.82rem;">No. 14, Flower Road, Colombo 07</li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-col">
-                <h4>Navigate</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="flavors.html">Flavor Collection</a></li>
-                    <li><a href="about.html">About Sri Lanka</a></li>
-                    <li><a href="farm-to-bottle.html">Our Process</a></li>
-                    <li><a href="experience.html">Experience Map</a></li>
-                    <li><a href="impact.html">Our Impact</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <span>© 2026 Island Squeeze (Pvt) Ltd. All rights reserved.</span>
+                <span>Made with <span class="footer-green">♥</span> in Sri Lanka.</span>
             </div>
-            <div class="footer-col">
-                <h4>Resources</h4>
-                <ul class="footer-links">
-                    <li><a href="gallery.html">Media Gallery</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="#">F.A.Q.</a></li>
-                    <li><a href="#">Sourcing Principles</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Get in Touch</h4>
-                <ul class="footer-links" style="color:rgba(255,255,255,0.5);font-size:0.95rem;line-height:1.6;">
-                    <li>Email: <a href="mailto:hello@islandsqueeze.lk"
-                            style="display:inline;color:inherit;">hello@islandsqueeze.lk</a></li>
-                    <li>Hotline: <a href="tel:+94112345678" style="display:inline;color:inherit;">+94 11 234 5678</a>
-                    </li>
-                    <li>No. 14, Flower Road, Colombo 07</li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Island Squeeze (Pvt) Ltd. All rights reserved.</p>
-            <p>Made with ♥ in Sri Lanka.</p>
         </div>
     </footer>
 
-    <script src="app.js"></script>
+    <script>
+        // Navbar scroll shadow
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // Scroll reveal
+        const reveals = document.querySelectorAll('.reveal');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+            });
+        }, { threshold: 0.12 });
+        reveals.forEach(el => io.observe(el));
+
+        // Counter animation
+        function animateCounter(el, target, suffix) {
+            let current = 0;
+            const step = target / 50;
+            const timer = setInterval(() => {
+                current = Math.min(current + step, target);
+                el.textContent = Math.round(current) + (suffix || '');
+                if (current >= target) clearInterval(timer);
+            }, 30);
+        }
+
+        const counterCards = document.querySelectorAll('.counter-card');
+        const counterIO = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    const num = e.target.querySelector('.counter-num');
+                    const raw = parseInt(num.textContent);
+                    const unit = e.target.querySelector('.counter-unit');
+                    animateCounter(num, raw, unit ? unit.textContent : '');
+                    counterIO.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.3 });
+        counterCards.forEach(c => counterIO.observe(c));
+    </script>
+
 </body>
 
 </html>

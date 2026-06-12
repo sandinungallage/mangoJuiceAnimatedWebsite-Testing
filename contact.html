@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Island Squeeze</title>
+    <meta name="description"
+        content="Get in touch with Island Squeeze — orders, wholesale enquiries, farm partnerships, and general support.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+        <defs>
+            <linearGradient id="brand-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#22C55E" />
+                <stop offset="100%" stop-color="#FCD34D" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="brand">
+            <svg class="brand-icon" viewBox="0 0 24 24">
+                <path
+                    d="M12,2C9,2 6.5,4 5.5,6.8C4.5,9.6 5,12.5 6.5,14.8C8,17.1 10,18.5 12,20C14,18.5 16,17.1 17.5,14.8C19,12.5 19.5,9.6 18.5,6.8C17.5,4 15,2 12,2Z" />
+                <path d="M12,6C12,6 8,9 8,13C8,15.2 9.8,17 12,17C14.2,17 16,15.2 16,13C16,9 12,6 12,6Z"
+                    fill="rgba(255,255,255,0.4)" />
+            </svg>
+            <span class="brand-text">Island Squeeze</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="flavors.html" class="nav-link">Flavors</a></li>
+            <li><a href="about.html" class="nav-link">Sri Lanka</a></li>
+            <li><a href="farm-to-bottle.html" class="nav-link">Our Process</a></li>
+            <li><a href="experience.html" class="nav-link">Map Experience</a></li>
+            <li><a href="impact.html" class="nav-link">Impact</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+        <a href="flavors.html" class="order-btn pulse-glow">Order Now</a>
+    </nav>
+
+    <main style="padding-top: 8rem;">
+
+        <!-- Page Header -->
+        <section class="section" style="padding-top: 2rem; padding-bottom: 0;">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto 5rem auto;">
+                <span
+                    style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: var(--theme-color);">We'd
+                    love to hear from you</span>
+                <h1 class="section-title"
+                    style="font-size: clamp(3rem, 7vw, 5.5rem); margin-top: 1rem; margin-bottom: 1.25rem; letter-spacing: -2px;">
+                    Let's Talk.</h1>
+                <p class="section-text" style="margin-bottom: 0;">Whether you're placing a bulk order, exploring a
+                    retail partnership, curious about our farms, or just want to know which juice to try first — our
+                    team is right here.</p>
+            </div>
+        </section>
+
+        <!-- Contact Grid -->
+        <section class="section" style="padding-top: 0;">
+            <div class="contact-grid">
+
+                <!-- Left: Form -->
+                <div class="glass-card">
+                    <h3 class="section-title" style="font-size: 2rem; margin-bottom: 0.5rem;">Send a Message</h3>
+                    <p class="section-text" style="font-size: 1rem; margin-bottom: 2.5rem;">We reply to every message
+                        within one business day.</p>
+
+                    <form id="contact-form" novalidate>
+                        <!-- Name row -->
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+                            <div class="form-group">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name" name="first_name" class="form-input"
+                                    placeholder="Dilini" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" id="last-name" name="last_name" class="form-input"
+                                    placeholder="Perera" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-input"
+                                placeholder="dilini@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number <span
+                                    style="color: rgba(255,255,255,0.3); font-weight: 400; text-transform: none; letter-spacing: 0;">(optional)</span></label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+94 77 123 4567">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" class="form-input"
+                                style="cursor: pointer; appearance: none; background-image: url(\"
+                                data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'
+                                viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.4)' stroke-width='2'
+                                %3E%3Cpolyline points='6 9 12 15 18 9' %3E%3C/polyline%3E%3C/svg%3E\");
+                                background-repeat: no-repeat; background-position: right 1rem center;" required>
+                                <option value="" disabled selected>Select a topic…</option>
+                                <option value="order">Place an Order</option>
+                                <option value="wholesale">Wholesale / Retail Partnership</option>
+                                <option value="farm">Farm Partnership Enquiry</option>
+                                <option value="press">Press & Media</option>
+                                <option value="feedback">Product Feedback</option>
+                                <option value="other">Something Else</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" class="form-input" rows="5"
+                                placeholder="Tell us what's on your mind…" style="resize: vertical; min-height: 130px;"
+                                required></textarea>
+                        </div>
+
+                        <!-- Consent -->
+                        <div style="display: flex; align-items: flex-start; gap: 0.9rem; margin-bottom: 2rem;">
+                            <input type="checkbox" id="consent" name="consent" required
+                                style="width: 1.1rem; height: 1.1rem; margin-top: 0.2rem; accent-color: var(--theme-color); cursor: pointer; flex-shrink: 0;">
+                            <label for="consent"
+                                style="font-size: 0.88rem; color: rgba(255,255,255,0.5); line-height: 1.5; cursor: pointer;">I
+                                agree to Island Squeeze using my details to respond to this enquiry. We will never share
+                                your information with third parties.</label>
+                        </div>
+
+                        <button type="submit" class="checkout-btn" id="submit-btn">
+                            Send Message
+                        </button>
+
+                        <!-- Success state (hidden by default) -->
+                        <div id="form-success"
+                            style="display: none; margin-top: 1.5rem; padding: 1.25rem 1.5rem; background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); border-radius: 16px; text-align: center;">
+                            <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">✓</div>
+                            <p style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.25rem;">Message received!
+                            </p>
+                            <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">We'll get back to you within one
+                                business day.</p>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Right: Info -->
+                <div style="display: flex; flex-direction: column; gap: 2rem;">
+
+                    <!-- Contact Details Card -->
+                    <div class="glass-card">
+                        <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 2rem;">Contact Details</h3>
+                        <div class="contact-info-list">
+                            <div class="contact-info-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                                <div class="contact-info-text">
+                                    <h5>Head Office</h5>
+                                    <p>No. 14, Flower Road<br>Colombo 07, Sri Lanka</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 11.5 19.79 19.79 0 0 1 1 2.18 2 2 0 0 1 2.98 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 7.91a16 16 0 0 0 6.08 6.08l1.28-1.28a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                                </svg>
+                                <div class="contact-info-text">
+                                    <h5>Hotline</h5>
+                                    <p><a href="tel:+94112345678" style="color: inherit; text-decoration: none;">+94 11
+                                            234 5678</a><br>
+                                        <span style="font-size: 0.85rem; color: rgba(255,255,255,0.4);">Mon – Sat, 8am –
+                                            6pm</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                    <polyline points="22,6 12,13 2,6" />
+                                </svg>
+                                <div class="contact-info-text">
+                                    <h5>Email</h5>
+                                    <p><a href="mailto:hello@islandsqueeze.lk"
+                                            style="color: inherit; text-decoration: none;">hello@islandsqueeze.lk</a><br>
+                                        <a href="mailto:wholesale@islandsqueeze.lk"
+                                            style="color: inherit; text-decoration: none; font-size: 0.9rem; opacity: 0.7;">wholesale@islandsqueeze.lk</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                    <line x1="8" y1="21" x2="16" y2="21" />
+                                    <line x1="12" y1="17" x2="12" y2="21" />
+                                </svg>
+                                <div class="contact-info-text">
+                                    <h5>Pressery & Tours</h5>
+                                    <p>No. 88, Ingurukade Junction<br>Rajagiriya, Sri Lanka<br>
+                                        <span style="font-size: 0.85rem; color: rgba(255,255,255,0.4);">Tours by
+                                            appointment only</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div
+                            style="margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 1.75rem;">
+                            <p
+                                style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.35); margin-bottom: 1rem;">
+                                Follow the Squeeze</p>
+                            <div class="social-links">
+                                <!-- Instagram -->
+                                <a href="#" class="social-icon" aria-label="Instagram">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                    </svg>
+                                </a>
+                                <!-- Facebook -->
+                                <a href="#" class="social-icon" aria-label="Facebook">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                                    </svg>
+                                </a>
+                                <!-- TikTok -->
+                                <a href="#" class="social-icon" aria-label="TikTok">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+                                    </svg>
+                                </a>
+                                <!-- LinkedIn -->
+                                <a href="#" class="social-icon" aria-label="LinkedIn">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                        <rect x="2" y="9" width="4" height="12" />
+                                        <circle cx="4" cy="4" r="2" />
+                                    </svg>
+                                </a>
+                                <!-- WhatsApp -->
+                                <a href="https://wa.me/94112345678" class="social-icon" aria-label="WhatsApp">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hours Card -->
+                    <div class="glass-card" style="padding: 2rem;">
+                        <h3 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 1.5rem;">Business Hours</h3>
+                        <div style="display: flex; flex-direction: column; gap: 0.9rem;">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 0.9rem; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                <span style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">Monday – Friday</span>
+                                <span style="font-weight: 700; font-size: 0.95rem;">8:00 am – 6:00 pm</span>
+                            </div>
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 0.9rem; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                <span style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">Saturday</span>
+                                <span style="font-weight: 700; font-size: 0.95rem;">9:00 am – 3:00 pm</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">Sunday & Public
+                                    Holidays</span>
+                                <span
+                                    style="font-weight: 700; font-size: 0.95rem; color: rgba(255,255,255,0.35);">Closed</span>
+                            </div>
+                        </div>
+                        <div
+                            style="margin-top: 1.5rem; padding: 1rem 1.25rem; background: rgba(34,197,94,0.08); border: 1px solid rgba(34,197,94,0.2); border-radius: 12px; display: flex; align-items: center; gap: 0.75rem;">
+                            <div
+                                style="width: 8px; height: 8px; border-radius: 50%; background: var(--theme-color); flex-shrink: 0; box-shadow: 0 0 8px rgba(34,197,94,0.6);">
+                            </div>
+                            <p style="font-size: 0.88rem; color: rgba(255,255,255,0.7); line-height: 1.4;">Orders
+                                received before <strong style="color: #fff;">2:00 pm</strong> are processed and
+                                dispatched same day across Colombo.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Strip -->
+        <section class="section reveal-on-scroll" style="padding-top: 0;">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 1rem;">Quick Answers</h2>
+            <p class="section-text" style="text-align: center; max-width: 560px; margin: 0 auto 3.5rem auto;">The
+                questions we get most often — answered straight.</p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 960px; margin: 0 auto;">
+
+                <div class="glass-card" style="padding: 2rem;">
+                    <h4
+                        style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="color: var(--theme-color);">🚚</span> Where do you deliver?
+                    </h4>
+                    <p style="color: rgba(255,255,255,0.65); font-size: 0.95rem; line-height: 1.6;">Same-day delivery
+                        across Greater Colombo (Colombo, Nugegoda, Dehiwala, Rajagiriya, Battaramulla, Kotte). Next-day
+                        cold-chain delivery island-wide.</p>
+                </div>
+
+                <div class="glass-card" style="padding: 2rem;">
+                    <h4
+                        style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="color: var(--theme-color);">📦</span> What is the minimum order?
+                    </h4>
+                    <p style="color: rgba(255,255,255,0.65); font-size: 0.95rem; line-height: 1.6;">Retail orders have
+                        no minimum — order a single bottle if you like. Wholesale and restaurant accounts require a
+                        minimum of 48 bottles per order.</p>
+                </div>
+
+                <div class="glass-card" style="padding: 2rem;">
+                    <h4
+                        style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="color: var(--theme-color);">🧊</span> How long do bottles keep?
+                    </h4>
+                    <p style="color: rgba(255,255,255,0.65); font-size: 0.95rem; line-height: 1.6;">Sealed bottles last
+                        21 days refrigerated at 4°C. Once opened, consume within 48 hours for peak flavour. Never freeze
+                        — it damages the cell structure of the raw juice.</p>
+                </div>
+
+                <div class="glass-card" style="padding: 2rem;">
+                    <h4
+                        style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="color: var(--theme-color);">🏪</span> Do you supply retail stores?
+                    </h4>
+                    <p style="color: rgba(255,255,255,0.65); font-size: 0.95rem; line-height: 1.6;">Yes — we supply
+                        select supermarkets, health stores, and cafés across Sri Lanka. Email <a
+                            href="mailto:wholesale@islandsqueeze.lk"
+                            style="color: var(--theme-color); text-decoration: none;">wholesale@islandsqueeze.lk</a> to
+                        discuss stocking us.</p>
+                </div>
+
+                <div class="glass-card" style="padding: 2rem;">
+                    <h4
+                        style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="color: var(--theme-color);">🌱</span> Are all products vegan?
+                    </h4>
+                    <p style="color: rgba(255,255,255,0.65); font-size: 0.95rem; line-height: 1.6;">All of our juices
+                        and blends are 100% plant-based and vegan. There are no animal-derived ingredients, additives,
+                        or processing aids used in any product.</p>
+                </div>
+
+                <div class="glass-card" style="padding: 2rem;">
+                    <h4
+                        style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="color: var(--theme-color);">🤝</span> Can I partner as a farmer?
+                    </h4>
+                    <p style="color: rgba(255,255,255,0.65); font-size: 0.95rem; line-height: 1.6;">We're always looking
+                        for ethical farms growing premium tropical fruits. Use the contact form above and select "Farm
+                        Partnership Enquiry" — our sourcing team will follow up within 3 business days.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Map + CTA -->
+        <section class="section reveal-on-scroll" style="padding-top: 0;">
+            <div class="glass-card" style="max-width: 960px; margin: 0 auto; overflow: hidden; padding: 0;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr;">
+
+                    <!-- Map placeholder -->
+                    <div
+                        style="position: relative; height: 380px; background: linear-gradient(135deg, rgba(34,197,94,0.08), rgba(252,211,77,0.05)); display: flex; align-items: center; justify-content: center; border-right: 1px solid rgba(255,255,255,0.06);">
+                        <!-- Stylised Sri Lanka teardrop -->
+                        <svg viewBox="0 0 200 320" style="height: 260px; opacity: 0.7;">
+                            <path
+                                d="M100,20 C155,65 170,140 170,200 C170,280 130,320 100,348 C70,320 30,280 30,200 C30,140 45,65 100,20 Z"
+                                fill="rgba(34,197,94,0.08)" stroke="rgba(34,197,94,0.3)" stroke-width="1.5" />
+                            <!-- Colombo dot -->
+                            <circle cx="72" cy="228" r="6" fill="var(--theme-color)">
+                                <animate attributeName="r" values="6;12;6" dur="2s" repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="72" cy="228" r="6" fill="var(--theme-color)" opacity="0.9" />
+                            <text x="80" y="232" fill="rgba(255,255,255,0.8)" font-size="11"
+                                font-family="Outfit,sans-serif" font-weight="700">Colombo</text>
+                            <!-- Pressery label -->
+                            <text x="40" y="250" fill="rgba(255,255,255,0.4)" font-size="9"
+                                font-family="Outfit,sans-serif">Pressery @ Rajagiriya</text>
+                            <!-- Grid lines -->
+                            <line x1="100" y1="20" x2="100" y2="340" stroke="rgba(255,255,255,0.04)"
+                                stroke-dasharray="4" />
+                            <line x1="30" y1="200" x2="170" y2="200" stroke="rgba(255,255,255,0.04)"
+                                stroke-dasharray="4" />
+                        </svg>
+                        <div
+                            style="position: absolute; top: 1.5rem; left: 1.5rem; background: rgba(8,13,11,0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 0.6rem 1rem; font-size: 0.8rem; font-weight: 600; color: rgba(255,255,255,0.6);">
+                            📍 Colombo, Sri Lanka</div>
+                    </div>
+
+                    <!-- CTA text -->
+                    <div
+                        style="padding: 3rem; display: flex; flex-direction: column; justify-content: center; gap: 1.25rem;">
+                        <span
+                            style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--theme-color);">Visit
+                            Us</span>
+                        <h3 style="font-size: 1.9rem; font-weight: 900; letter-spacing: -0.5px; line-height: 1.2;">Come
+                            See<br>the Pressery.</h3>
+                        <p style="color: rgba(255,255,255,0.65); font-size: 0.95rem; line-height: 1.6;">We offer guided
+                            tours of our cold-press facility in Rajagiriya. Watch the full process from fruit to bottle
+                            — and taste directly from the press at the end.</p>
+                        <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+                            <div
+                                style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; color: rgba(255,255,255,0.6);">
+                                <span style="color: var(--theme-color);">✓</span> By appointment only
+                            </div>
+                            <div
+                                style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; color: rgba(255,255,255,0.6);">
+                                <span style="color: var(--theme-color);">✓</span> Groups of 4–12 people
+                            </div>
+                            <div
+                                style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; color: rgba(255,255,255,0.6);">
+                                <span style="color: var(--theme-color);">✓</span> Complimentary tasting included
+                            </div>
+                        </div>
+                        <a href="mailto:hello@islandsqueeze.lk?subject=Pressery Tour Booking" class="order-btn"
+                            style="display: inline-block; text-align: center; margin-top: 0.5rem;">Book a Tour →</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="brand" style="padding:0;">
+                    <svg class="brand-icon" viewBox="0 0 24 24">
+                        <path
+                            d="M12,2C9,2 6.5,4 5.5,6.8C4.5,9.6 5,12.5 6.5,14.8C8,17.1 10,18.5 12,20C14,18.5 16,17.1 17.5,14.8C19,12.5 19.5,9.6 18.5,6.8C17.5,4 15,2 12,2Z" />
+                        <path d="M12,6C12,6 8,9 8,13C8,15.2 9.8,17 12,17C14.2,17 16,15.2 16,13C16,9 12,6 12,6Z"
+                            fill="rgba(255,255,255,0.4)" />
+                    </svg>
+                    <span class="brand-text">Island Squeeze</span>
+                </a>
+                <p>Taste the Island. Drink the Truth. Sri Lanka's first cold-pressed juice brand — raw, pure, and
+                    supporting smallholder farmers across the island.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigate</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="flavors.html">Flavor Collection</a></li>
+                    <li><a href="about.html">About Sri Lanka</a></li>
+                    <li><a href="farm-to-bottle.html">Our Process</a></li>
+                    <li><a href="impact.html">Our Impact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="gallery.html">Media Gallery</a></li>
+                    <li><a href="experience.html">Experience Map</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">F.A.Q.</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get in Touch</h4>
+                <ul class="footer-links" style="color:rgba(255,255,255,0.5);font-size:0.95rem;line-height:1.6;">
+                    <li>Email: <a href="mailto:hello@islandsqueeze.lk"
+                            style="display:inline;color:inherit;">hello@islandsqueeze.lk</a></li>
+                    <li>Hotline: <a href="tel:+94112345678" style="display:inline;color:inherit;">+94 11 234 5678</a>
+                    </li>
+                    <li>No. 14, Flower Road, Colombo 07</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Island Squeeze (Pvt) Ltd. All rights reserved.</p>
+            <p>Made with ♥ in Sri Lanka.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        // Contact form enhanced handler
+        const form = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const successMsg = document.getElementById('form-success');
+
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                if (!form.checkValidity()) { form.reportValidity(); return; }
+
+                // Loading state
+                submitBtn.textContent = 'Sending…';
+                submitBtn.style.opacity = '0.7';
+                submitBtn.disabled = true;
+
+                // Simulate send
+                setTimeout(() => {
+                    form.style.display = 'none';
+                    successMsg.style.display = 'block';
+                }, 1200);
+            });
+        }
+
+        // Navbar scroll
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+        }, { passive: true });
+
+        // Reveal observer
+        const obs = new IntersectionObserver(entries =>
+            entries.forEach(e => e.target.classList.toggle('revealed', e.isIntersecting)),
+            { threshold: 0.12 }
+        );
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => obs.observe(el));
+    </script>
+</body>
+
+</html>

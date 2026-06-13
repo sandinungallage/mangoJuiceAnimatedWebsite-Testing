@@ -9,17 +9,30 @@
 </head>
 
 <body>
+    <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+        <defs>
+            <linearGradient id="brand-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#22C55E" />
+                <stop offset="100%" stop-color="#FCD34D" />
+            </linearGradient>
+        </defs>
+    </svg>
 
     <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
         <a href="index.html" class="brand">
-            <div class="brand-icon">🍃</div>
+            <svg class="brand-icon" viewBox="0 0 24 24">
+                <path
+                    d="M12,2C9,2 6.5,4 5.5,6.8C4.5,9.6 5,12.5 6.5,14.8C8,17.1 10,18.5 12,20C14,18.5 16,17.1 17.5,14.8C19,12.5 19.5,9.6 18.5,6.8C17.5,4 15,2 12,2Z" />
+                <path d="M12,6C12,6 8,9 8,13C8,15.2 9.8,17 12,17C14.2,17 16,15.2 16,13C16,9 12,6 12,6Z"
+                    fill="rgba(255,255,255,0.4)" />
+            </svg>
             <span class="brand-text">Island Squeeze</span>
         </a>
         <ul class="nav-links">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="flavors.html">Flavors</a></li>
-            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html">Sri Lanka</a></li>
             <li><a href="farm-to-bottle.html">Our Process</a></li>
             <li><a href="experience.html">Map Experience</a></li>
             <li><a href="impact.html">Impact</a></li>
@@ -312,16 +325,21 @@
         <div class="footer-inner">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <div class="footer-brand-row">
-                        <div class="footer-brand-icon">🍃</div>
-                        <span class="footer-brand-name">Island Squeeze</span>
-                    </div>
+                    <a href="index.html" class="brand" style="padding:0;">
+                        <svg class="brand-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M12,2C9,2 6.5,4 5.5,6.8C4.5,9.6 5,12.5 6.5,14.8C8,17.1 10,18.5 12,20C14,18.5 16,17.1 17.5,14.8C19,12.5 19.5,9.6 18.5,6.8C17.5,4 15,2 12,2Z" />
+                            <path d="M12,6C12,6 8,9 8,13C8,15.2 9.8,17 12,17C14.2,17 16,15.2 16,13C16,9 12,6 12,6Z"
+                                fill="rgba(255,255,255,0.4)" />
+                        </svg>
+                        <span class="brand-text">Island Squeeze</span>
+                    </a>
                     <p>Taste the Island. Drink the Truth. Sri Lanka's first cold-pressed juice brand — raw, pure, and
                         supporting smallholder farmers across the island.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Navigate</h4>
-                    <ul>
+                    <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="flavors.html">Flavor Collection</a></li>
                         <li><a href="about.html">About Sri Lanka</a></li>
@@ -331,7 +349,7 @@
                 </div>
                 <div class="footer-col">
                     <h4>Resources</h4>
-                    <ul>
+                    <ul class="footer-links">
                         <li><a href="gallery.html">Media Gallery</a></li>
                         <li><a href="experience.html">Experience Map</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
@@ -341,62 +359,22 @@
                 </div>
                 <div class="footer-col">
                     <h4>Get in Touch</h4>
-                    <ul>
-                        <li><a href="mailto:hello@islandsqueeze.lk">hello@islandsqueeze.lk</a></li>
-                        <li><a href="tel:+94112345678">+94 11 234 5678</a></li>
-                        <li style="color:rgba(255,255,255,0.3);font-size:0.82rem;">No. 14, Flower Road, Colombo 07</li>
+                    <ul class="footer-links" style="color:rgba(255,255,255,0.5);font-size:0.95rem;line-height:1.6;">
+                        <li>Email: <a href="mailto:hello@islandsqueeze.lk"
+                                style="display:inline;color:inherit;">hello@islandsqueeze.lk</a></li>
+                        <li>Hotline: <a href="tel:+94112345678" style="display:inline;color:inherit;">+94 11 234 5678</a>
+                        </li>
+                        <li>No. 14, Flower Road, Colombo 07</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>© 2026 Island Squeeze (Pvt) Ltd. All rights reserved.</span>
-                <span>Made with <span class="footer-green">♥</span> in Sri Lanka.</span>
+                <p>&copy; 2026 Island Squeeze (Pvt) Ltd. All rights reserved.</p>
+                <p>Made with <span class="footer-green">♥</span> in Sri Lanka.</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Navbar scroll shadow
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            navbar.classList.toggle('scrolled', window.scrollY > 20);
-        });
-
-        // Scroll reveal
-        const reveals = document.querySelectorAll('.reveal');
-        const io = new IntersectionObserver((entries) => {
-            entries.forEach(e => {
-                if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
-            });
-        }, { threshold: 0.12 });
-        reveals.forEach(el => io.observe(el));
-
-        // Counter animation
-        function animateCounter(el, target, suffix) {
-            let current = 0;
-            const step = target / 50;
-            const timer = setInterval(() => {
-                current = Math.min(current + step, target);
-                el.textContent = Math.round(current) + (suffix || '');
-                if (current >= target) clearInterval(timer);
-            }, 30);
-        }
-
-        const counterCards = document.querySelectorAll('.counter-card');
-        const counterIO = new IntersectionObserver((entries) => {
-            entries.forEach(e => {
-                if (e.isIntersecting) {
-                    const num = e.target.querySelector('.counter-num');
-                    const raw = parseInt(num.textContent);
-                    const unit = e.target.querySelector('.counter-unit');
-                    animateCounter(num, raw, unit ? unit.textContent : '');
-                    counterIO.unobserve(e.target);
-                }
-            });
-        }, { threshold: 0.3 });
-        counterCards.forEach(c => counterIO.observe(c));
-    </script>
-
+    <script src="app.js"></script>
 </body>
-
 </html>
